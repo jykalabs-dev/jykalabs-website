@@ -1,21 +1,55 @@
-// The reply form: checks the letter, sends it to Web3Forms, and shows what happened.
+// The contact form: checks the message, sends it to Web3Forms, and shows what happened.
 (function () {
   "use strict";
 
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  var form = document.getElementById("reply-form");
+  // Sections fade up as they come into view, a little apart within each group.
+  var reveals = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window) {
+    reveals.forEach(function (el) {
+      var siblings = Array.prototype.filter.call(el.parentElement.children, function (c) { return c.hasAttribute("data-reveal"); });
+      el.style.setProperty("--reveal-delay", Math.min(siblings.indexOf(el), 6) * 70 + "ms");
+    });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    reveals.forEach(function (el) { observer.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  // The header gains a soft shadow once the page scrolls under it.
+  var header = document.querySelector(".site-header");
+  var onScroll = function () { header.classList.toggle("is-scrolled", window.scrollY > 8); };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  var form = document.getElementById("contact-form");
   if (!form) return;
 
-  var fields = document.getElementById("reply-fields");
+  var fields = document.getElementById("form-fields");
   var unavailable = document.getElementById("form-unavailable");
   var send = document.getElementById("send");
   var status = document.getElementById("send-status");
   var sent = document.getElementById("sent");
   var key = form.elements.namedItem("access_key");
 
-  // No access key yet: say so rather than letting a letter fail.
+  // "Work with us" links choose the topic before jumping to the form.
+  var topic = document.getElementById("f-topic");
+  document.querySelectorAll("a[data-topic]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      topic.value = link.getAttribute("data-topic");
+    });
+  });
+
+  // No access key yet: say so rather than letting a message fail.
   if (!key || !key.value.trim()) {
     fields.disabled = true;
     unavailable.hidden = false;
@@ -80,7 +114,7 @@
     send.disabled = busy;
     if (busy) send.setAttribute("aria-busy", "true");
     else send.removeAttribute("aria-busy");
-    send.textContent = busy ? "Sending…" : "Send letter";
+    send.textContent = busy ? "Sending…" : "Send message";
   }
 
   form.addEventListener("submit", function (event) {
@@ -118,7 +152,7 @@
       })
       .catch(function () {
         setBusy(false);
-        setStatus("Your letter wasn't sent. Check your connection and try again; what you wrote is still here.", true);
+        setStatus("Your message wasn't sent. Check your connection and try again; what you wrote is still here.", true);
       });
   });
 })();

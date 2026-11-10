@@ -51,6 +51,8 @@ Assumption to confirm: the founder also wants companies that need software built
 
 - Name: **Jyka Labs** (domain jykalabs.com). No existing logo, palette or typeface for the company; the products have their own brands, which this site doesn't reuse.
 - Voice (from the founder): minimalist, simple, eye-catching, very professional. Plain, specific English.
+- Visual standard (founder, 2026-11-11): a world-class, conventional software-company site at the craft level of Stripe, Linear and Vercel. The first, concept-led design (an inland letter card) was rejected as poor; do not use novelty concepts or metaphors as the page's structure.
+- Logo: lowercase "j" mark in a navy tile with a saffron dot (the j's tittle), beside the wordmark "Jyka Labs".
 
 ## Evidence on Hand
 

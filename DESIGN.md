@@ -1,41 +1,51 @@
 # Design: jykalabs.com
 
-The site is a letter from Jyka Labs, set as an Indian inland letter card: pale blue card stock, printed in one blue ink, with fold creases between panels. The reply panel is the contact form. Tokens live in `docs/styles.css` `:root`.
+A product-company site at the craft level of Stripe, Linear and Vercel: white and cool-grey grounds, navy ink, one saffron accent. Tokens live in `docs/styles.css` `:root`; nothing below hard-codes a colour.
+
+## Logo
+
+A navy rounded tile (40 × 40, radius 10) with a white lowercase "j" stroke and a saffron dot as the j's tittle, beside the wordmark "Jyka Labs" in Geist Bold, tracking -0.03em. On navy, the tile inverts (white tile, navy j); the dot stays saffron. Source: `brand/logo-mark.svg` (also `docs/favicon.svg` and the `#logo-mark` symbol in `docs/index.html`).
 
 ## Colour
 
-One ink on one paper; tone comes from weight and rule density, not new hues.
-
-| Token | Value | Use | Contrast |
+| Token | Value | Use | Contrast on white |
 | --- | --- | --- | --- |
-| `--paper` | #dce7f0 | page ground | |
-| `--paper-deep` | #cfdde9 | reply panel | |
-| `--paper-light` | #e8f0f6 | product panels, fields, stamp | |
-| `--ink` | #16335f | headings, body, rules | 10.5:1 on paper |
-| `--ink-soft` | #34507a | secondary text | 6.6:1 on paper |
-| `--ink-faint` | #475f85 | field labels, fold labels | 5.2:1 on paper, 4.7:1 on reply panel |
-| `--rule` | #9fb4cc | writing lines (decorative only) | |
-| `--post` / `--post-dark` | #b0261c / #8e1d15 | **only** the send button, the SENT mark and form errors | white on post 6.7:1 |
+| `--ink` | #0b1f3f | headings, primary buttons, logo tile | 16:1 |
+| `--text` | #1f2937 | body | 14:1 |
+| `--muted` | #4b5563 | secondary text | 7.5:1 |
+| `--blue` | #2346c8 | links, focus ring | 7.4:1 |
+| `--control` | #8a94a6 | input and secondary-button edges | 3.1:1 |
+| `--line` | #e3e6ec | hairlines, card edges | decorative |
+| `--canvas` | #f6f7f9 | tinted sections | |
+| `--navy-900` | #071630 | "How we work" and footer ground | |
+| `--on-dark` / `--on-dark-muted` | #e8edf6 / #a9b6cc | text on navy | 14:1 / 8.3:1 |
+| `--saffron` / `--saffron-soft` | #f2a516 / #fdf2dc | logo dot, "coming soon", current step, step numbers | never body text |
+| `ok`, `warn`, `alert` (+ `-soft`) | #146c43, #8a5300, #b42318 | status pills in illustrations, form errors | all ≥ 4.5:1 on their soft tint |
 
-Light only, no dark mode: a letter card is paper.
+Light only; no dark mode.
 
 ## Type
 
-Schibsted Grotesk (variable, self-hosted, OFL) for everything. Display 800 with -0.035em tracking; section titles 800; field labels 700 caps with 0.12–0.16em tracking; body 400 on a 2rem ruled line. Fluid steps `--step--1` to `--step-display`.
+Geist (variable, self-hosted, OFL). Hero 2.5–4.5rem, 700, -0.04em, line-height 1.02. Section titles 1.75–2.75rem, 700, -0.035em. Card titles 1.25–1.5rem, 650. Body 1rem / 1.6; ledes 1.06–1.19rem in `--muted`. Numbers in illustrations are tabular.
 
 ## Components
 
-- **Band:** sticky top band, double rule under it (the card's tear edge); nav as small caps labels.
-- **Ruled rows:** `dl` rows, heading in the margin column, a hairline rule under each.
-- **Address panel:** a product, double-ruled border, field label, "Coming soon" rubber stamp in ink (never red).
-- **Fold:** dashed crease with a centred "Fold here" label; used twice, between the letter and the body and before the reply.
-- **Fields:** filled paper-light, 2px bottom rule, red caret; textarea is ruled.
-- **Send:** red rubber-stamp button, inset white keyline; the one red control.
+- **Buttons:** pills, min height 48px (40px small). Primary navy; secondary white with a `--control` edge. Press scales to 0.97.
+- **Header:** sticky, translucent white with a hairline; nav hides under 1024px, "Contact us" stays.
+- **Capabilities:** a white hairline grid (4 / 2 / 1 columns), icon tile + title + one sentence; the last cell is a navy call to action.
+- **Product cards:** a navy art panel with a drawn mark (shield for OneMuster, snowflake for ThandiMandi), the name, a "Coming soon" badge and one line. No feature detail (founder's rule).
+- **Process:** four steps on navy with saffron numbers (the order is the point).
+- **Paths:** three bordered panels, each ending in an arrow link that preselects the form topic.
+- **Form:** white card, 48px fields, blue focus ring, inline errors in `--alert`, privacy note under a hairline.
+- **Illustrations:** drawn in HTML/CSS/SVG with skeleton bars instead of figures, so they show shapes, never invented numbers or customers. `docs/og-image.png` is rendered from `brand/og.html`.
 
 ## Motion
 
-One authored moment: the postmark strikes the stamp on load (420ms, `--ease-out`), and the SENT mark strikes the reply on success. Both are off under reduced motion. Controls change colour in 160ms.
+- Hero: window and phone rise in sequence, the chart line draws itself, the two status chips pop in; the phone and automation chip float gently and the saffron orbit turns slowly.
+- Scroll: sections and grid items fade up as they enter (700ms, ease-out, 70ms stagger within a group). The OneMuster check draws and the ThandiMandi snowflake turns into place when their cards appear.
+- Hover (fine pointers only): capability icons fill navy, cards lift 2–3px. Header gains a soft shadow once the page scrolls.
+- Content is visible without JavaScript; all movement is off under reduced motion.
 
 ## Layout
 
-Page max 74rem, gutter 1–3rem fluid, text measure 64ch. Two columns for ruled rows, products and fields above 52rem / 40rem; one column below. The band stops being sticky on phones.
+Container 76rem, gutter 1–2.5rem fluid, section padding 4.5–8rem. Single column under 1024px; stacked pillars, paths and form fields under 768px.

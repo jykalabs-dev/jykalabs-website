@@ -6,20 +6,19 @@ related_targets: []
 ---
 
 Scope: the whole jykalabs.com site, one page (index.html). Mode: Persuade.
-Audience: companies wanting software built, partners and investors, possible hires. Job: understand what Jyka Labs is and builds, believe it, write to us.
-Action: the contact form, in working form on the page. Proof: the two products described plainly, marked coming soon. Constraints: no personal contact details, no legal name or location, no invented proof.
-Ran unattended (continuation without questions): assigned direction built without a decision round; no image generation, so code-led.
+Audience: companies wanting software built, partners and investors, possible hires. Action: the contact form. Proof: the capabilities (founder's activity list) and the products, one line each, marked coming soon (founder: no feature detail, no product count).
+History: the first direction (inland letter card, seed:91235a6d97c6e65e) was rejected by the founder as poor. The founder took the standing exit: the category standard at full fidelity, at the craft level of Stripe, Linear and Vercel (recorded in PRODUCT.md).
 
 ## Direction contract
 
-THESIS: The site is a letter from Jyka Labs, set as an Indian inland letter card: unfolded, printed in one blue ink, and the reply panel is the contact form. It refuses the dark-gradient SaaS studio hero over three service cards.
+THESIS: A confident product-company page: one bold claim, real product shapes, plain proof. It refuses novelty metaphors and filler cards.
 
-OWN-WORLD: Pale inland-card blue paper as the ground; everything printed in one deep postal-blue ink, tone by weight and rule density (single-ink discipline, from the ASCII grid challenger). Perforated edges, fold creases, ruled writing lines and boxed address fields. One red: the cancellation postmark, reserved for the one active thing, the send action (reserved-colour discipline, from the orienteering challenger). No India Post insignia.
+OWN-WORLD: White and cool grey (#f6f7f9) grounds, navy ink (#0b1f3f) for type, buttons and the dark section, one saffron accent (#f2a516) for the logo dot, "coming soon" and the current step. Geist throughout, tight negative tracking on headings. Pill buttons, 8/12/20 radii, soft navy-tinted shadows, hairline dividers.
 
-STORY: A visitor reads a short letter: who we are, what we build, the two products, how we work; believes it because it is specific and plain; writes back on the reply panel.
+STORY: Visitors learn in one viewport that Jyka Labs builds and runs digital products; scan what it does; see its products in a line each; read four working habits; choose why they're writing; send the form.
 
-FIRST VIEWPORT: The card's top band (Jyka Labs wordmark left, "Inland letter" style header rule, nav as printed field labels right). Large salutation-headline set left over ruled lines ("Software for the work India actually does."), a two-line letter opening, and a "Write to us" link to the reply panel; a postmark-and-stamp block top right carrying jykalabs.com.
+FIRST VIEWPORT: Sticky white header (logo left, four links, navy "Contact us"). Left: "We build and run digital products." (second line in blue), lede, "What we do" and "Talk to us". Right: navy stage with a platform window whose chart draws itself, a floating phone, and "Deployed" / "Automation running" chips.
 
-FORM: Inland letter card, candidate 7 of my grounded list. seed:91235a6d97c6e65e
+FORM: Category standard (canon), chosen by the founder. seed: none (unavailable)
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

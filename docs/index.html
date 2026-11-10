@@ -3,235 +3,337 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jyka Labs: software for the work India runs on</title>
-  <meta name="description" content="Jyka Labs is a product company. We build and run our own software for industries that still run on registers, phone calls and paper.">
-  <meta name="theme-color" content="#dce7f0">
+  <title>Jyka Labs | We build and run digital products</title>
+  <meta name="description" content="Jyka Labs is a technology company that designs, builds and operates software products, platforms and brands: SaaS, web and mobile apps, marketplaces, and AI and data solutions.">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://jykalabs.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Jyka Labs">
-  <meta property="og:description" content="Software for the work India runs on. We build and run our own products for industries that still run on registers, phone calls and paper.">
+  <meta property="og:site_name" content="Jyka Labs">
+  <meta property="og:title" content="Jyka Labs: we build and run digital products">
+  <meta property="og:description" content="A technology company that designs, builds and operates software products, platforms and brands.">
   <meta property="og:url" content="https://jykalabs.com/">
-  <link rel="preload" href="fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:image" content="https://jykalabs.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
   <script src="main.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="band">
-    <div class="band-inner">
-      <a class="wordmark" href="#top" aria-label="Jyka Labs, back to top">Jyka&nbsp;Labs</a>
-      <nav aria-label="Sections">
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="logo-mark" viewBox="0 0 40 40">
+      <rect width="40" height="40" rx="10" fill="var(--logo-tile, #0b1f3f)"/>
+      <path d="M23 15.5v12.25a6.25 6.25 0 0 1-6.25 6.25H14" fill="none" stroke="var(--logo-ink, #fff)" stroke-width="4.25" stroke-linecap="round"/>
+      <circle cx="23" cy="9" r="2.9" fill="var(--saffron, #f2a516)"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="Jyka Labs home">
+        <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span class="brand-name">Jyka Labs</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="#build">What we build</a></li>
+          <li><a href="#what-we-do">What we do</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#work">How we work</a></li>
-          <li><a class="nav-write" href="#write">Write to us</a></li>
+          <li><a href="#how">How we work</a></li>
+          <li><a href="#work-with-us">Work with us</a></li>
         </ul>
       </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="#contact">Contact us</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="letter" id="top" aria-labelledby="headline">
-      <div class="letter-inner">
-        <div class="stamp-block" aria-hidden="true">
-          <svg class="stamp" viewBox="0 0 120 144" focusable="false">
-            <defs>
-              <mask id="perf">
-                <rect width="120" height="144" fill="#fff"/>
-                <g fill="#000">
-                  <circle cx="0" cy="0" r="5"/><circle cx="20" cy="0" r="5"/><circle cx="40" cy="0" r="5"/><circle cx="60" cy="0" r="5"/><circle cx="80" cy="0" r="5"/><circle cx="100" cy="0" r="5"/><circle cx="120" cy="0" r="5"/>
-                  <circle cx="0" cy="144" r="5"/><circle cx="20" cy="144" r="5"/><circle cx="40" cy="144" r="5"/><circle cx="60" cy="144" r="5"/><circle cx="80" cy="144" r="5"/><circle cx="100" cy="144" r="5"/><circle cx="120" cy="144" r="5"/>
-                  <circle cx="0" cy="24" r="5"/><circle cx="0" cy="48" r="5"/><circle cx="0" cy="72" r="5"/><circle cx="0" cy="96" r="5"/><circle cx="0" cy="120" r="5"/>
-                  <circle cx="120" cy="24" r="5"/><circle cx="120" cy="48" r="5"/><circle cx="120" cy="72" r="5"/><circle cx="120" cy="96" r="5"/><circle cx="120" cy="120" r="5"/>
-                </g>
-              </mask>
-            </defs>
-            <rect width="120" height="144" class="stamp-paper" mask="url(#perf)"/>
-            <rect x="12" y="12" width="96" height="120" class="stamp-frame"/>
-            <text x="60" y="92" class="stamp-mono" text-anchor="middle">JL</text>
-            <path class="stamp-rule" d="M28 104h64"/>
-            <text x="60" y="124" class="stamp-label" text-anchor="middle">JYKA LABS</text>
-          </svg>
-          <svg class="postmark" viewBox="0 0 260 120" focusable="false">
-            <g class="postmark-lines">
-              <path d="M2 38c12-6 24-6 36 0s24 6 36 0 24-6 36 0"/>
-              <path d="M2 54c12-6 24-6 36 0s24 6 36 0 24-6 36 0"/>
-              <path d="M2 70c12-6 24-6 36 0s24 6 36 0 24-6 36 0"/>
-              <path d="M2 86c12-6 24-6 36 0s24 6 36 0 24-6 36 0"/>
-            </g>
-            <circle cx="186" cy="62" r="50" class="postmark-ring"/>
-            <circle cx="186" cy="62" r="38" class="postmark-ring postmark-inner"/>
-            <path id="pm-arc" d="M146 62a40 40 0 0 1 80 0" fill="none"/>
-            <text class="postmark-text"><textPath href="#pm-arc" startOffset="50%" text-anchor="middle">JYKALABS.COM</textPath></text>
-            <text x="186" y="70" class="postmark-year" text-anchor="middle">2026</text>
-            <text x="186" y="90" class="postmark-small" text-anchor="middle">INDIA</text>
-          </svg>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">We build and run <span class="hero-accent">digital products.</span></h1>
+          <p class="hero-lede">Jyka Labs is a technology company that designs, builds and operates software products, platforms and brands, from SaaS and mobile apps to marketplaces and AI-driven tools.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#what-we-do">What we do</a>
+            <a class="btn btn-secondary" href="#contact">Talk to us</a>
+          </div>
         </div>
 
-        <p class="salutation">Dear reader,</p>
-        <h1 id="headline">Software for the work India runs on.</h1>
-        <div class="letter-body">
-          <p>Jyka Labs is a product company. We build and run our own software for industries that still run on registers, phone calls and paper: the guard at a society gate, the cold room on a highway, the technician who gets the call at midnight.</p>
-          <p>What we make works in the languages people speak, on the phones they own, and on the networks they get.</p>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hv-stage">
+            <div class="hv-orbit hv-orbit-1"></div>
+            <div class="hv-orbit hv-orbit-2"></div>
+
+            <div class="hv-window">
+              <div class="hv-bar"><span></span><span></span><span></span><p>Platform overview</p></div>
+              <div class="hv-body">
+                <div class="hv-kpis">
+                  <div><p class="hv-k">Active users</p><div class="hv-skel hv-skel-lg"></div></div>
+                  <div><p class="hv-k">Uptime</p><div class="hv-skel hv-skel-lg"></div></div>
+                  <div><p class="hv-k">Releases</p><div class="hv-skel hv-skel-lg"></div></div>
+                </div>
+                <svg class="hv-chart" viewBox="0 0 320 120" preserveAspectRatio="none">
+                  <path class="hv-chart-grid" d="M0 30h320M0 60h320M0 90h320"/>
+                  <path class="hv-chart-area" d="M0 100 C40 92 60 70 95 74 S150 40 185 46 S240 18 275 22 S305 12 320 8 V120 H0Z"/>
+                  <path class="hv-chart-line" pathLength="1" d="M0 100 C40 92 60 70 95 74 S150 40 185 46 S240 18 275 22 S305 12 320 8"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="hv-phone">
+              <div class="hv-notch"></div>
+              <div class="hv-app-head"><span class="hv-app-icon"></span><div class="hv-skel" style="width:55%"></div></div>
+              <div class="hv-tile"><span class="hv-tile-dot"></span><div><div class="hv-skel" style="width:80%"></div><div class="hv-skel hv-skel-faint" style="width:55%"></div></div></div>
+              <div class="hv-tile"><span class="hv-tile-dot hv-tile-dot-b"></span><div><div class="hv-skel" style="width:70%"></div><div class="hv-skel hv-skel-faint" style="width:45%"></div></div></div>
+              <div class="hv-tile"><span class="hv-tile-dot hv-tile-dot-c"></span><div><div class="hv-skel" style="width:75%"></div><div class="hv-skel hv-skel-faint" style="width:60%"></div></div></div>
+              <div class="hv-phone-btn"></div>
+            </div>
+
+            <div class="hv-chip hv-chip-ai">
+              <svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>
+              <span>Automation running</span>
+            </div>
+            <div class="hv-chip hv-chip-ok">
+              <svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
+              <span>Deployed</span>
+            </div>
+          </div>
         </div>
-        <p class="signoff"><span>Yours,</span> <span class="signature">Jyka Labs</span></p>
-        <p class="letter-action"><a class="link-strong" href="#write">Write to us</a> <span class="hint">about a product, a partnership or a job</span></p>
       </div>
     </section>
 
-    <div class="fold" role="presentation"><span>Fold here</span></div>
-
-    <section class="section" id="build" aria-labelledby="build-title">
-      <div class="section-inner">
-        <h2 id="build-title">What we build</h2>
-        <dl class="ruled">
-          <div class="ruled-row">
-            <dt>Our own products, end to end</dt>
-            <dd>We are not an agency. We design, build, ship and run each product ourselves, and keep improving it after launch.</dd>
-          </div>
-          <div class="ruled-row">
-            <dt>For India's operating realities</dt>
-            <dd>Hindi and regional languages, low-cost Android phones, patchy networks, GST invoices and India's data protection law are where we start, not afterthoughts.</dd>
-          </div>
-          <div class="ruled-row">
-            <dt>For the industries software skipped</dt>
-            <dd>Private security, facility upkeep and the cold chain keep the country running, and still run on paper. That is the work we build for.</dd>
-          </div>
-        </dl>
+    <section class="section section-tint" id="what-we-do" aria-labelledby="wwd-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="wwd-title">What we do</h2>
+          <p>We build products we own and operate, and we build for partners. The work spans the whole life of a product: idea, design, engineering, launch and years of running it well.</p>
+        </div>
+        <ul class="capabilities">
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
+            <h3>Software development</h3>
+            <p>Custom software and IT services, engineered to last and easy to change.</p>
+          </li>
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span>
+            <h3>SaaS and platforms</h3>
+            <p>Subscription software and platforms that serve many businesses from one secure base.</p>
+          </li>
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-devices"/></svg></span>
+            <h3>Web and mobile apps</h3>
+            <p>Fast, accessible apps that work on any phone, in the languages people speak.</p>
+          </li>
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg></span>
+            <h3>AI, data and automation</h3>
+            <p>Analytics and automation that take repetitive work off people's hands.</p>
+          </li>
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-community"/></svg></span>
+            <h3>Marketplaces and communities</h3>
+            <p>Platforms that connect buyers, sellers and professionals, and earn their trust.</p>
+          </li>
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span>
+            <h3>Digital products and services</h3>
+            <p>Online services and brands, built and run end to end.</p>
+          </li>
+          <li data-reveal>
+            <span class="cap-icon"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg></span>
+            <h3>Licensing and subscriptions</h3>
+            <p>Product development, licensing and subscription services for businesses that want proven software.</p>
+          </li>
+          <li class="cap-cta" data-reveal>
+            <h3>Have something in mind?</h3>
+            <p>Tell us what you want to build.</p>
+            <a class="link-arrow" href="#contact" data-topic="A product you'd like built">Start a conversation</a>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="section" id="products" aria-labelledby="products-title">
-      <div class="section-inner">
-        <h2 id="products-title">Products</h2>
-        <div class="addresses">
-          <article class="address" aria-labelledby="p-onemuster">
-            <div class="address-head">
-              <p class="field-label">Product</p>
-              <span class="status-stamp">Coming soon</span>
-            </div>
-            <h3 id="p-onemuster">OneMuster</h3>
-            <p class="address-for"><span class="field-label">For</span> security agencies, housing societies and workplaces</p>
-            <p class="address-lede">Security and facility management, from the gate to the monthly bill.</p>
-            <ul class="lines">
-              <li>Agencies plan duties and see who is on post, site by site.</li>
-              <li>Guards mark attendance with a selfie and their location, even with no network, on a phone app in English, Hindi and Marathi.</li>
-              <li>A missed check or an absent guard goes up a named chain of people until someone acts.</li>
-              <li>Bills come from the duties actually done, and the society can check them before paying.</li>
-            </ul>
-          </article>
-
-          <article class="address" aria-labelledby="p-thandimandi">
-            <div class="address-head">
-              <p class="field-label">Product</p>
-              <span class="status-stamp">Coming soon</span>
-            </div>
-            <h3 id="p-thandimandi">ThandiMandi</h3>
-            <p class="address-for"><span class="field-label">For</span> refrigeration and cold chain businesses across India</p>
-            <p class="address-lede">A discovery and information platform for the cold chain, not a marketplace.</p>
-            <ul class="lines">
-              <li>Find companies, products, services and professionals: refrigeration, cold rooms, processing, logistics and maintenance.</li>
-              <li>Post what you need; it is screened, and up to five screened companies respond.</li>
-              <li>Professionals show their skills and certificates and apply for jobs.</li>
-              <li>Guides and calculators for the people who design and run cold rooms.</li>
-            </ul>
-          </article>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="products-title">Our products</h2>
+          <p>Products we are building and will run ourselves.</p>
         </div>
+        <ul class="products">
+          <li class="product-card" data-reveal>
+            <div class="product-art product-art-a" aria-hidden="true">
+              <svg viewBox="0 0 240 160" class="art">
+                <circle class="art-ring art-ring-1" cx="120" cy="80" r="62"/>
+                <circle class="art-ring art-ring-2" cx="120" cy="80" r="44"/>
+                <path class="art-shield" d="M120 44 96 53v17c0 15 10 27 24 32 14-5 24-17 24-32V53z"/>
+                <path class="art-check" pathLength="1" d="m109 74 8 8 15-16"/>
+                <circle class="art-node" cx="58" cy="80" r="5"/>
+                <circle class="art-node" cx="182" cy="80" r="5"/>
+                <circle class="art-node art-node-accent" cx="120" cy="18" r="5"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-title-row">
+                <h3>OneMuster</h3>
+                <span class="badge">Coming soon</span>
+              </div>
+              <p>Security and facility management for housing societies and workplaces.</p>
+            </div>
+          </li>
+          <li class="product-card" data-reveal>
+            <div class="product-art product-art-b" aria-hidden="true">
+              <svg viewBox="0 0 240 160" class="art">
+                <circle class="art-ring art-ring-1" cx="120" cy="80" r="62"/>
+                <circle class="art-ring art-ring-2" cx="120" cy="80" r="44"/>
+                <g class="art-flake">
+                  <path d="M120 50v60M94 65l52 30M94 95l52-30"/>
+                  <path d="m112 55 8 6 8-6M112 105l8-6 8 6M97 74l9-1 3-9M143 86l-9 1-3 9M97 86l9 1 3 9M143 74l-9-1-3-9"/>
+                </g>
+                <circle class="art-node" cx="58" cy="80" r="5"/>
+                <circle class="art-node" cx="182" cy="80" r="5"/>
+                <circle class="art-node art-node-accent" cx="120" cy="142" r="5"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-title-row">
+                <h3>ThandiMandi</h3>
+                <span class="badge">Coming soon</span>
+              </div>
+              <p>A discovery platform for India's refrigeration and cold chain industry.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section" id="work" aria-labelledby="work-title">
-      <div class="section-inner">
-        <h2 id="work-title">How we work</h2>
-        <dl class="ruled">
-          <div class="ruled-row">
-            <dt>Built for the person doing the work</dt>
-            <dd>The guard, the supervisor, the technician. Screens are plain, buttons say what they do, and nothing depends on a perfect connection.</dd>
-          </div>
-          <div class="ruled-row">
-            <dt>Privacy and security from the first version</dt>
-            <dd>Consent, encryption, data export and deletion are designed in, so customers do not have to ask for them later.</dd>
-          </div>
-          <div class="ruled-row">
-            <dt>Honest numbers</dt>
-            <dd>Our products show what happened, from real records. If a figure isn't measured, we don't show it.</dd>
-          </div>
-          <div class="ruled-row">
-            <dt>A few products built with partners</dt>
-            <dd>If your business needs a product built and run with the same care, tell us about it.</dd>
-          </div>
-        </dl>
+    <section class="section section-dark" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="how-title">How we work</h2>
+          <p>Products, not projects. We stay with what we build, so we build it to last.</p>
+        </div>
+        <ol class="process">
+          <li data-reveal>
+            <span class="process-num">1</span>
+            <h3>Start with the problem</h3>
+            <p>We learn how the work is done today before we design a single screen.</p>
+          </li>
+          <li data-reveal>
+            <span class="process-num">2</span>
+            <h3>Design for real conditions</h3>
+            <p>Low-cost phones, weak networks, many languages. If it works there, it works everywhere.</p>
+          </li>
+          <li data-reveal>
+            <span class="process-num">3</span>
+            <h3>Ship early, improve often</h3>
+            <p>Working software in people's hands quickly, then better with every release.</p>
+          </li>
+          <li data-reveal>
+            <span class="process-num">4</span>
+            <h3>Run it for the long term</h3>
+            <p>Security, privacy, support and updates for as long as people rely on it.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <div class="fold" role="presentation"><span>Fold here</span></div>
+    <section class="section" id="work-with-us" aria-labelledby="wwu-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="wwu-title">Work with us</h2>
+          <p>Whatever brings you here, the form below reaches the founding team.</p>
+        </div>
+        <ul class="paths">
+          <li data-reveal>
+            <span class="path-icon"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
+            <h3>Build a product with us</h3>
+            <p>Bring an idea or a problem. We design, build and run it with the same care as our own products.</p>
+            <a class="link-arrow" href="#contact" data-topic="A product you'd like built">Tell us about it</a>
+          </li>
+          <li data-reveal>
+            <span class="path-icon"><svg class="ico" aria-hidden="true"><use href="#i-handshake"/></svg></span>
+            <h3>Partners and investors</h3>
+            <p>Licensing, distribution, partnerships or investment: we'd like to hear from you.</p>
+            <a class="link-arrow" href="#contact" data-topic="Partnership or investment">Start a conversation</a>
+          </li>
+          <li data-reveal>
+            <span class="path-icon"><svg class="ico" aria-hidden="true"><use href="#i-people"/></svg></span>
+            <h3>Join the team</h3>
+            <p>Engineers and designers who care about the people using their work.</p>
+            <a class="link-arrow" href="#contact" data-topic="Joining Jyka Labs">Introduce yourself</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <section class="section reply" id="write" aria-labelledby="write-title">
-      <div class="section-inner">
-        <h2 id="write-title">Write to us</h2>
-        <p class="reply-intro">Tell us what you have in mind. We read every letter and reply by email.</p>
+    <section class="section section-tint" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy" data-reveal>
+          <h2 id="contact-title">Let's talk</h2>
+          <p>Tell us what you have in mind. We read every message and reply by email.</p>
+          <ul class="contact-points">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>A reply from the people who build our products</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No mailing lists, no sales follow-ups</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Your details used only to reply to you</li>
+          </ul>
+        </div>
 
-        <form class="reply-form" id="reply-form" action="https://api.web3forms.com/submit" method="post" novalidate>
-          <!-- Web3Forms access key: paste it as the value below. Until then the form says it isn't available yet. -->
-          <input type="hidden" name="access_key" value="">
-          <input type="hidden" name="subject" value="New letter from jykalabs.com">
-          <input type="hidden" name="from_name" value="jykalabs.com">
-          <input type="hidden" name="redirect" value="https://jykalabs.com/thanks.html">
-          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-card" data-reveal>
+          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="post" novalidate>
+            <!-- Web3Forms access key: paste it as the value below. Until then the form says it isn't available yet. -->
+            <input type="hidden" name="access_key" value="">
+            <input type="hidden" name="subject" value="New message from jykalabs.com">
+            <input type="hidden" name="from_name" value="jykalabs.com">
+            <input type="hidden" name="redirect" value="https://jykalabs.com/thanks.html">
+            <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-          <p class="form-unavailable" id="form-unavailable" hidden>The form isn't available yet. Please come back in a few days.</p>
+            <p class="form-unavailable" id="form-unavailable" hidden>The form isn't available yet. Please come back in a few days.</p>
 
-          <fieldset id="reply-fields">
-            <legend class="visually-hidden">Your letter</legend>
-            <div class="field">
-              <label for="f-name">Your name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="e-name">
-              <p class="field-error" id="e-name" hidden></p>
-            </div>
-            <div class="field">
-              <label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" autocapitalize="none" spellcheck="false" required maxlength="200" aria-describedby="e-email">
-              <p class="field-error" id="e-email" hidden></p>
-            </div>
-            <div class="field">
-              <label for="f-org">Company or organisation <span class="optional">(optional)</span></label>
-              <input id="f-org" name="organisation" type="text" autocomplete="organization" maxlength="160">
-            </div>
-            <div class="field">
-              <label for="f-topic">It's about</label>
-              <select id="f-topic" name="topic">
-                <option>A product you'd like built</option>
-                <option>Partnership or investment</option>
-                <option>Joining Jyka Labs</option>
-                <option>OneMuster or ThandiMandi</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="field field-wide">
-              <label for="f-message">Your message</label>
-              <textarea id="f-message" name="message" rows="7" required minlength="10" maxlength="4000" aria-describedby="e-message"></textarea>
-              <p class="field-error" id="e-message" hidden></p>
-            </div>
+            <fieldset id="form-fields">
+              <legend class="visually-hidden">Your message</legend>
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="e-name">
+                <p class="field-error" id="e-name" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Work email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" autocapitalize="none" spellcheck="false" required maxlength="200" aria-describedby="e-email">
+                <p class="field-error" id="e-email" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-org">Company <span class="optional">(optional)</span></label>
+                <input id="f-org" name="organisation" type="text" autocomplete="organization" maxlength="160">
+              </div>
+              <div class="field">
+                <label for="f-topic">Topic</label>
+                <select id="f-topic" name="topic">
+                  <option>A product you'd like built</option>
+                  <option>Partnership or investment</option>
+                  <option>Joining Jyka Labs</option>
+                  <option>Our products</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field field-wide">
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" rows="6" required minlength="10" maxlength="4000" aria-describedby="e-message"></textarea>
+                <p class="field-error" id="e-message" hidden></p>
+              </div>
+              <div class="form-actions field-wide">
+                <button class="btn btn-primary" type="submit" id="send">Send message</button>
+                <p class="send-status" id="send-status" role="status" aria-live="polite"></p>
+              </div>
+            </fieldset>
 
-            <div class="send-row">
-              <button class="send" type="submit" id="send">Send letter</button>
-              <p class="send-status" id="send-status" role="status" aria-live="polite"></p>
-            </div>
-          </fieldset>
+            <p class="privacy" id="privacy">We use what you send only to reply to you. It reaches us through Web3Forms, a form delivery service, and we delete it when the conversation is over, or sooner if you ask. This site sets no cookies and runs no tracking.</p>
+          </form>
 
-          <p class="privacy" id="privacy">We use what you send only to reply to you. It reaches us through Web3Forms, a form delivery service, and we delete it when the conversation is over, or sooner if you ask. This site sets no cookies and runs no tracking.</p>
-        </form>
-
-        <div class="sent" id="sent" hidden tabindex="-1">
-          <svg class="sent-mark" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-            <circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="42"/>
-            <text x="60" y="68" text-anchor="middle">SENT</text>
-          </svg>
-          <div>
-            <h3>Thank you. Your letter is on its way.</h3>
+          <div class="sent" id="sent" hidden tabindex="-1">
+            <span class="sent-icon"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3>Thank you, your message is on its way.</h3>
             <p>We'll reply to the email address you gave.</p>
           </div>
         </div>
@@ -239,11 +341,44 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>&copy; <span id="year">2026</span> Jyka Labs</p>
-      <p>jykalabs.com</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-invert" href="#top" aria-label="Jyka Labs home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="brand-name">Jyka Labs</span>
+        </a>
+        <p>We build and run digital products.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#how">How we work</a></li>
+          <li><a href="#work-with-us">Work with us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-base">
+      <p>&copy; <span id="year">2026</span> Jyka Labs. All rights reserved.</p>
     </div>
   </footer>
+
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4.75 4.75 0 0 1-.5 9.5z"/></symbol>
+      <symbol id="i-devices" viewBox="0 0 24 24"><path d="M3 15V6a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v2M2 19h10M15 10h5a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zM17 17h1"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2z"/></symbol>
+      <symbol id="i-community" viewBox="0 0 24 24"><path d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM5 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM19 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM7.5 20a4.5 4.5 0 0 1 9 0M1.5 19a3.5 3.5 0 0 1 4.5-3.3M22.5 19a3.5 3.5 0 0 0-4.5-3.3"/></symbol>
+      <symbol id="i-key" viewBox="0 0 24 24"><path d="M8.5 15.5a4.5 4.5 0 1 1 3.9-6.75L21 8.75V12h-2v2h-2.5v-2h-4.1a4.5 4.5 0 0 1-3.9 3.5zM7.5 11h.01"/></symbol>
+      <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M11 17l2 2a1.4 1.4 0 0 0 2-2M13 15l2.5 2.5a1.4 1.4 0 0 0 2-2l-3-3M2 12l4-4 4 1 3-2 3 1 6 6-3 3M2 12l4 4"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 20v-1.5A3.5 3.5 0 0 0 12.5 15h-5A3.5 3.5 0 0 0 4 18.5V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M20 20v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.15a3.5 3.5 0 0 1 0 6.7"/></symbol>
+    </defs>
+  </svg>
 </body>
 </html>
