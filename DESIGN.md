@@ -27,7 +27,7 @@ Drawn here from simple shapes, so it isn't copied from anyone. Before registerin
 
 ## Type
 
-Plus Jakarta Sans 600/700 at -0.03em for headings (hero -0.035em). Inter 400/500 for text. JetBrains Mono 500 for step numbers, status pills, mock-up telemetry and captions. Noto Sans Devanagari only for the mock-up's Hindi and Marathi (loaded only when shown). All OFL, self-hosted in `docs/fonts/` (not from Google Fonts, so visitors' addresses aren't sent to a third party).
+Plus Jakarta Sans 600/700 at -0.03em for headings (hero -0.035em). Inter 400/500 for text. JetBrains Mono 500 only for status pills, the mock-ups' labels and the character counter (data, not decoration). Noto Sans Devanagari only for the mock-up's Hindi and Marathi (loaded only when shown). All OFL, self-hosted in `docs/fonts/` (not from Google Fonts, so visitors' addresses aren't sent to a third party).
 
 ## Imagery
 
@@ -39,8 +39,12 @@ Photos and the city loop were generated with Higgsfield (Kling O1 image, Kling 3
 - **Hero:** headline, intro, primary button, "See our products". Right: product tabs (arrow keys, Home/End) over a photo of each product's setting with an illustrative screen. OneMuster: English/हिन्दी/मराठी using the app's own translations, an Offline toggle, and "Mark attendance" that resolves to the app's real confirmation. ThandiMandi: "Post requirement" shows up to five responses.
 - **Products:** asymmetric bento (1.45 : 1), photo on top, status pill, "The work today" / "What it does".
 - **Ambient band:** the city at dawn, muted, looping only while on screen, with a pause button; a still photo with reduced motion or data saver.
-- **What we do:** a 2 × 2 hairline grid; a top rule draws in on hover.
+- **What we do:** a 2 × 2 hairline grid, type only (no icon tiles); a top rule draws in on hover.
 - **Let's talk:** three audience cards that pick the topic, bring the form into view and focus it; the form with a live character count, inline errors, "Sending…", email fallback and success in place.
+
+## Spacing
+
+Sections are 3–5rem top and bottom (`--section`). On wide screens each section heading sits beside its intro text, so the width is used rather than leaving an empty column. Hero, card photos, the city band and the form are kept compact. Laptop page height went from 4,684 px to 3,649 px on 15 Nov 2026.
 
 ## Motion
 
