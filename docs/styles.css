@@ -182,7 +182,6 @@ a:hover { color: var(--accent-primary-hover); }
 .stage-panel[hidden] { display: none !important; }
 .stage-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .stage-panel::before { content: ""; position: absolute; inset: 0; background: var(--photo-veil); pointer-events: none; z-index: 1; }
-.stage-caption { position: absolute; left: 0.75rem; bottom: 0.75rem; z-index: 2; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgb(10 10 12 / 0.72); color: #E9EBEF; font-size: 0.75rem; }
 .stage-panel.is-entering .device { animation: device-in 220ms var(--ease-out) both; }
 .stage-panel.is-entering .stage-photo { animation: photo-in 320ms var(--ease-out) both; }
 @keyframes device-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -239,7 +238,6 @@ a:hover { color: var(--accent-primary-hover); }
 .ambient-copy { position: relative; z-index: 1; padding-block: clamp(1.5rem, 3.5vw, 2.5rem); display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; }
 .ambient-copy p { font: 600 clamp(1.5rem, 3.2vw, 2.25rem)/1.15 var(--font-display); letter-spacing: -0.03em; max-width: 22ch; color: #E9EBEF; text-wrap: balance; }
 .ambient-tools { display: flex; align-items: center; gap: 0.75rem; }
-.ambient-note { font-size: 0.75rem; color: #C9CFCC; }
 .ambient-toggle { width: 40px; height: 40px; display: inline-grid; place-items: center; border-radius: var(--radius-sm); border: 1px solid rgb(233 235 239 / 0.4); background: rgb(10 10 12 / 0.4); color: #E9EBEF; cursor: pointer; }
 .ambient-toggle:hover { border-color: #E9EBEF; }
 .ambient-toggle:focus-visible { outline-color: #E9EBEF; }

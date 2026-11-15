@@ -35,7 +35,7 @@ Plus Jakarta Sans 600/700 at -0.03em for headings (hero -0.035em). Inter 400/500
 
 ## Imagery
 
-Photos and the city loop were generated with Higgsfield (Kling O1 image, Kling 3.0 video) on 15 Nov 2026 and are labelled "Illustrative" on the page. They show settings, never people or customers. Sources: `docs/media/` (WebP at 800 and 1400/1600 wide; `city-loop.mp4` 960×540, 5 s, silent).
+Photos and the city loop were generated with Higgsfield (Kling O1 image, Kling 3.0 video) on 15 Nov 2026. The page carries no caption on them (founder, 16 Nov 2026). They show settings, never people or customers. Sources: `docs/media/` (WebP at 800 and 1400/1600 wide; `city-loop.mp4` 960×540, 5 s, silent).
 
 ## Components
 
