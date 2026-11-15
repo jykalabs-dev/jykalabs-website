@@ -15,8 +15,8 @@ the height of the J around the logo, and don't recolour, stretch, rotate or add 
 | `app-icon.svg` | Phone home-screen icon (full-bleed square; phones round the corners) |
 | `favicon-small.svg` | Bold, flat version for 16 to 48 px (browser tabs) |
 
-The wordmark (JYKALABS) is live text in Plus Jakarta Sans (free, OFL, in `docs/fonts/`). Before sending the SVGs to a
-printer or another designer, convert the text to outlines in a vector editor, or send the PNGs.
+The wordmark (JYKALABS) is set in Plus Jakarta Sans (free, OFL, in `docs/fonts/`) and converted to outlines, so the SVGs
+look the same everywhere, with no font needed. They are safe to send to printers and other designers.
 
 ## Raster (PNG, transparent background) in `png/`
 

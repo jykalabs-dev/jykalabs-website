@@ -11,7 +11,7 @@
 - `docs/favicon.svg` and `favicon.ico`: a bold, flat version on an obsidian tile (`brand/favicon-small.svg`) so it reads at 16 px. `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` from `brand/app-icon.svg`.
 - PNGs of every version are in `brand/png/`; `brand/README.md` explains which file to use where.
 - The `#logo-mark` symbol in `index.html` takes its gradient stops from the `--logo-*` tokens, so it switches with the theme. The header wordmark is live text using `--logo-word` and `--logo-labs`.
-- The wordmark in the SVG files is live text. Convert it to outlines before print or handing files to others. Before registering the logo, run a trademark search (classes 9 and 42 on ipindia.gov.in).
+- The wordmark in the SVG files is outlined (paths, no font needed); the header wordmark on the site stays live text. Before registering the logo, run a trademark search (classes 9 and 42 on ipindia.gov.in).
 
 ## Colour
 
