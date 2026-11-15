@@ -47,7 +47,7 @@ Technology still lifes in the logo's palette (obsidian, silver, copper), generat
 - **Hero:** headline, intro, primary button, "See our products". Right: product tabs (arrow keys, Home/End) over a photo of each product's setting, with a small card: name, status and one line. No feature detail: the founder keeps product specifics off the public site (15 Nov 2026).
 - **Products:** asymmetric bento (1.45 : 1), photo on top, status pill, name, status and one line only (no feature lists).
 - **Ambient band:** a copper-lit grid, muted, looping only while on screen, with a pause button; a still photo with reduced motion or data saver.
-- **What we do:** a 2 × 2 hairline grid, type only (no icon tiles); a top rule draws in on hover.
+- **What we do:** a 2 × 2 hairline grid. Each cell has a picture of its area (`wwd-apps`, `wwd-platforms`, `wwd-data`, `wwd-products`, Higgsfield, 16 Nov 2026) that wipes in from the left as the cell scrolls into view (700 ms; the right-hand cell follows 120 ms later), zooms 3% on hover, and a copper top rule draws in on hover. Under reduced motion or without JavaScript the pictures are simply there.
 - **Let's talk:** three audience cards that pick the topic, bring the form into view and focus it; the form with a live character count, inline errors, "Sending…", email fallback and success in place.
 
 ## Spacing

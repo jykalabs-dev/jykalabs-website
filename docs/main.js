@@ -72,7 +72,7 @@
   }
 
   // ---------- Scroll motion: reveal once, and play the city video only when visible ----------
-  var revealables = document.querySelectorAll("[data-reveal]");
+  var revealables = document.querySelectorAll("[data-reveal], [data-wipe]");
   if ("IntersectionObserver" in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
