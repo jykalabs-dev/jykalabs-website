@@ -3,7 +3,9 @@
 The Jyka Labs company website: one static page, served by GitHub Pages from the `docs/` folder of `main`, at the custom domain jykalabs.com.
 
 - `docs/index.html`, `docs/styles.css`, `docs/main.js`: the site. No build step, no dependencies.
-- `docs/fonts/`: Bricolage Grotesque (headings) and Geist (text), self-hosted, both SIL Open Font License (`BRICOLAGE-OFL.txt`, `GEIST-OFL.txt`).
+- `docs/fonts/`: Plus Jakarta Sans (headings), Inter (text), JetBrains Mono (labels) and Noto Sans Devanagari (the Hindi/Marathi preview), self-hosted, all SIL Open Font License (the `*-OFL.txt` files).
+- `docs/media/`: illustrative photos and the city loop, generated with Higgsfield on 15 Nov 2026 (see `DESIGN.md`).
+- `founder/brand.md`: the brand review, voice rules and logo brief (not published).
 - `docs/robots.txt`, `docs/sitemap.xml`: for search engines. `docs/og-image.png`: the share image, rendered from `brand/og.html`.
 - `tools/check-contrast.mjs`: re-checks every colour pair in `docs/styles.css` against WCAG AA (`node tools/check-contrast.mjs`).
 - `docs/CNAME`: the custom domain. `docs/.nojekyll`: serve files as they are.

@@ -50,9 +50,9 @@ Assumption to confirm: the founder also wants companies that need software built
 ## Brand Commitments
 
 - Name: **Jyka Labs** (domain jykalabs.com). No existing logo, palette or typeface for the company; the products have their own brands, which this site doesn't reuse.
-- Voice (from the founder): minimalist, simple, eye-catching, very professional. Plain, specific English.
+- Voice (from the founder): minimalist, simple, very professional; subtle, never overstated (2026-11-15). Plain, specific English. Products: OneMuster "Early access" (live), ThandiMandi "In development".
 - Visual standard (founder, 2026-11-11): a world-class, conventional software-company site at the craft level of Stripe, Linear and Vercel. The first, concept-led design (an inland letter card) was rejected as poor; do not use novelty concepts or metaphors as the page's structure.
-- Logo: lowercase "j" mark in a violet tile with a cyan dot (the j's tittle), beside the wordmark "Jyka Labs" (recoloured 2026-11-15 with the light canvas, vivid accents redesign).
+- Logo: geometric lowercase "j" in a dark tile with a square amber tittle, beside "Jyka Labs" (industrial-tech redesign, 2026-11-15; rules in `DESIGN.md`).
 
 ## Evidence on Hand
 

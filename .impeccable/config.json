@@ -26,6 +26,24 @@
         "value": "geist",
         "createdAt": "2026-11-15T04:02:04.116Z",
         "reason": "Founder's redesign brief 2026-11-15: 'Geist can stay for body text'; headings use Bricolage Grotesque"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist mono",
+        "createdAt": "2026-11-15T16:59:05.126Z",
+        "reason": "Claude, 2026-11-15: mono labels for the black/copper/silver redesign; same family as the founder-approved Geist body face, headings stay Schibsted Grotesk"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-15T17:13:31.973Z",
+        "reason": "Founder's brief 2026-11-15 pins Plus Jakarta Sans (headings), Inter (body) and JetBrains Mono"
+      },
+      {
+        "rule": "overused-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-11-15T17:13:31.991Z",
+        "reason": "Founder's brief 2026-11-15 pins Plus Jakarta Sans (headings), Inter (body) and JetBrains Mono"
       }
     ]
   }

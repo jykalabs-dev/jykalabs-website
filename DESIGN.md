@@ -1,46 +1,41 @@
 # Design: jykalabs.com
 
-Light canvas, vivid accents (founder's brief, 2026-11-15; replaces the navy and saffron look). Tokens live in `docs/styles.css` `:root`; components use only tokens. `node tools/check-contrast.mjs` re-checks every text/background pair (all at 4.5:1 or more; control edges 3:1).
+"Tactile industrial-tech" (founder's brief, 15 Nov 2026): crisp, architectural and high-contrast. 1px hairlines, generous whitespace and quiet surfaces instead of gradients, glows or heavy shadows. Light theme by default, with a dark theme the visitor can choose (kept in `localStorage` as `jyka-theme`; no cookies). Tokens live in `docs/styles.css` (`:root` light, `[data-theme="dark"]` dark); components use only tokens. `node tools/check-contrast.mjs` re-checks 20 pairs in each theme.
 
 ## Logo
 
-A violet rounded tile (40 × 40, radius 10) with a white lowercase "j" stroke and a cyan dot as the j's tittle, beside the wordmark "Jyka Labs" in Bricolage Grotesque Bold. Source: `brand/logo-mark.svg` (= `docs/favicon.svg`, and the `#logo-mark` symbol in `docs/index.html`).
+A geometric lowercase "j" (square caps) in a rounded tile that takes the primary text colour, with a square amber tittle. Files: `brand/logo-mark.svg` = `docs/favicon.svg` (light colours) = the `#logo-mark` symbol in `index.html` (follows the theme).
 
 ## Colour
 
-| Token | Value | Use |
-| --- | --- | --- |
-| `--canvas` / `--surface` | #FBFAFF / #FFFFFF | page / cards and the How we work band |
-| `--ink` / `--ink-muted` | #15131A / #5A5866 | text / secondary text |
-| `--primary` / `--on-primary` | #5B2EE8 / #FFFFFF | primary buttons, links, focus ring |
-| `--hero-a` → `--hero-b` | #5B2EE8 → #9333EA | the hero panel only (white text, lede `--hero-muted` #F1EAFF) |
-| `--tile-violet/cyan/mint/pink` | #B79CFF, #5CE1E6, #9BF5B0, #FF9AD5 | service groups, icon tiles (ink text) |
-| `--glow-violet/cyan/mint/pink` | #E2D8FF, #CFF7F8, #D9FBE3, #FFE0F1 | soft radial glow behind the hero and contact only |
-| `--onemuster-a` → `-b` | #1D4A35 → #2E7D55 | OneMuster card and preview |
-| `--thandimandi-a` → `-b` | #0057FF → #0077D9 | ThandiMandi card and preview |
-| `--error`, `--ok` | #B42318, #146C43 | form errors, ticks |
-
-Gradients are written three times: a plain colour, `linear-gradient(135deg, A, B)`, then `linear-gradient(135deg in oklch, A, B)`. One hero gradient per screen height. Frosted cards (white 80% with a white edge and backdrop blur) only over the glow, solid under `prefers-reduced-transparency`. Light only.
+| Token | Light | Dark | Use |
+| --- | --- | --- | --- |
+| `--bg-canvas` / `--bg-surface` / `--bg-subtle` | #F8F8F6 / #FFFFFF / #F0F0EC | #0B0D0C / #141816 / #1C221F | page / cards / pills, selected tabs |
+| `--border-hairline` / `--border-control` | #E2E2DC / #7A817D | #232926 / #5E6762 | dividers / input edges (3:1) |
+| `--text-primary` / `--text-secondary` | #111312 / #525855 | #F2F4F3 / #949E99 | text |
+| `--accent-primary` (+ `-hover`) | #0F5C4C | #28A789 | primary buttons, links, focus, ticks |
+| `--on-accent` | #FFFFFF | #0B0D0C | text on the primary button |
+| `--accent-highlight` | #D97724 | #F59E0B | status dots, logo tittle, the Offline pill |
+| `--highlight-text` / `--highlight-soft` | #9A4E0E / #FBF0E4 | #F59E0B / #2A2112 | status pill text and fill (the brief's amber is too light for text on white) |
 
 ## Type
 
-Bricolage Grotesque (variable, self-hosted, OFL) for headings: hero 2.6–5.25rem, 750, -0.04em, line-height 0.98; section titles 2–3.25rem, -0.035em. Geist (variable, self-hosted, OFL) for text: 1rem / 1.6, ledes 1.06–1.25rem in `--ink-muted`.
+Plus Jakarta Sans 600/700 at -0.03em for headings (hero -0.035em). Inter 400/500 for text. JetBrains Mono 500 for step numbers, status pills, mock-up telemetry and captions. Noto Sans Devanagari only for the mock-up's Hindi and Marathi (loaded only when shown). All OFL, self-hosted in `docs/fonts/` (not from Google Fonts, so visitors' addresses aren't sent to a third party).
+
+## Imagery
+
+Photos and the city loop were generated with Higgsfield (Kling O1 image, Kling 3.0 video) on 15 Nov 2026 and are labelled "Illustrative" on the page. They show settings, never people or customers. Sources: `docs/media/` (WebP at 800 and 1400/1600 wide; `city-loop.mp4` 960×540, 5 s, silent).
 
 ## Components
 
-- **Header:** sticky canvas bar, hairline once scrolled; nav hides under 960px, "Talk to us" stays.
-- **Hero:** a rounded gradient panel. Left: headline, lede, "Talk to us" (white) and "See our products" (translucent). Right: two product previews drawn in HTML in each product's colours, using real product wording and no figures, labelled "Illustrations of products in development".
-- **Products:** one large gradient card per product with a "Coming soon" badge, one line, an outline mark (shield, snowflake); OneMuster links to onemuster.com.
-- **What we do:** the seven services in four coloured groups on a 7/5 · 5/7 grid.
-- **How we work:** four numbered steps on a white band (the order matters, so the numbers stay).
-- **Work with us:** three white cards; each "Talk to us" button preselects the form topic.
-- **Contact:** glow ground; email card and the form in frosted cards. Inline errors, "Sending…" state, email fallback with the message prefilled, success panel in place.
-- **Buttons:** pills, 48px (40px small), press scales to 0.97.
+- **Header:** sticky, translucent with blur where supported; wordmark, four links, theme toggle, "Start a conversation".
+- **Hero:** headline, intro, primary button, "See our products", "Zero cookies · Zero tracking". Right: product tabs (arrow keys, Home/End) over a photo of each product's setting with an illustrative screen. OneMuster: English/हिन्दी/मराठी using the app's own translations, an Offline toggle, and "Mark attendance" that resolves to the app's real confirmation. ThandiMandi: "Post requirement" shows up to five responses.
+- **Products:** asymmetric bento (1.45 : 1), photo on top, status pill, "The work today" / "What it does".
+- **Ambient band:** the city at dawn, muted, looping only while on screen, with a pause button; a still photo with reduced motion or data saver.
+- **What we do:** a 2 × 2 hairline grid; a top rule draws in on hover.
+- **How we work:** a four-step stepper; the connecting line draws once and the numbers turn green in order.
+- **Let's talk:** three audience cards that pick the topic, bring the form into view and focus it; the form with a live character count, inline errors, "Sending…", email fallback and success in place.
 
 ## Motion
 
-Only the hero previews rise in on load (900ms ease-out, 120ms apart); none under reduced motion. Hover changes colour or edge only.
-
-## Layout
-
-Container 74rem, gutter 1–2.5rem, section padding 4–7.5rem. Breakpoints 560 / 600 / 860 / 960 / 1024px; single column at phone width, checked at 360px.
+160–200 ms ease-out for state changes; reveals once on scroll (12px, 420 ms); the stepper line draws over 900 ms. Under `prefers-reduced-motion` nothing moves, the video never loads, and every element shows in its final state. Without JavaScript, everything is visible and the form still posts to Web3Forms.

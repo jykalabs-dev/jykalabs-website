@@ -1,11 +1,13 @@
-// Re-checks every text/background pair the site uses against WCAG 2.2 AA (4.5:1 for text, 3:1 for control edges).
-// Reads the colour tokens from docs/styles.css :root, so a changed token is checked on the next run.
+// Re-checks every text/background pair the site uses against WCAG 2.2 AA (4.5:1 for text, 3:1 for control edges and
+// large or non-text marks), in both themes. Reads the tokens from docs/styles.css (:root for light,
+// [data-theme="dark"] for dark), so a changed token is checked on the next run.
 // Run: node tools/check-contrast.mjs   (exits 1 if any pair fails)
 import { readFileSync } from "node:fs";
 
 const css = readFileSync(new URL("../docs/styles.css", import.meta.url), "utf8");
-const root = css.match(/:root\s*{([^}]*)}/)?.[1] ?? "";
-const tokens = Object.fromEntries([...root.matchAll(/--([\w-]+):\s*(#[0-9a-fA-F]{6})\s*;/g)].map((m) => [m[1], m[2]]));
+const block = (re) => Object.fromEntries([...(css.match(re)?.[1] ?? "").matchAll(/--([\w-]+):\s*(#[0-9a-fA-F]{6})\s*;/g)].map((m) => [m[1], m[2]]));
+const light = block(/:root\s*{([^}]*)}/);
+const themes = { light, dark: { ...light, ...block(/\[data-theme="dark"\]\s*{([^}]*)}/) } };
 
 const lum = (hex) => {
   const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
@@ -16,39 +18,38 @@ const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p);
 
 // [foreground token, background token, minimum, where it is used]
 const pairs = [
-  ["ink", "canvas", 4.5, "body text on the page"],
-  ["ink", "surface", 4.5, "text on cards"],
-  ["ink-muted", "canvas", 4.5, "secondary text on the page"],
-  ["ink-muted", "surface", 4.5, "secondary text on cards"],
-  ["on-primary", "primary", 4.5, "primary button"],
-  ["primary", "surface", 4.5, "links and the focus ring on cards"],
-  ["primary", "canvas", 4.5, "links and the focus ring on the page"],
-  ["on-primary", "hero-a", 4.5, "hero text, gradient start"],
-  ["on-primary", "hero-b", 4.5, "hero text, gradient end"],
-  ["hero-muted", "hero-a", 4.5, "hero lede, gradient start"],
-  ["hero-muted", "hero-b", 4.5, "hero lede, gradient end"],
-  ["primary", "on-primary", 4.5, "white button on the hero"],
-  ...["tile-violet", "tile-cyan", "tile-mint", "tile-pink"].map((t) => ["ink", t, 4.5, `service group on ${t}`]),
-  ...["glow-violet", "glow-cyan", "glow-mint", "glow-pink"].map((t) => ["ink", t, 4.5, `text over ${t}`]),
-  ...["glow-violet", "glow-cyan", "glow-mint", "glow-pink"].map((t) => ["ink-muted", t, 4.5, `secondary text over ${t}`]),
-  ["on-primary", "onemuster-a", 4.5, "OneMuster card, gradient start"],
-  ["on-primary", "onemuster-b", 4.5, "OneMuster card, gradient end"],
-  ["onemuster-a", "on-primary", 4.5, "OneMuster badge"],
-  ["on-primary", "thandimandi-a", 4.5, "ThandiMandi card, gradient start"],
-  ["on-primary", "thandimandi-b", 4.5, "ThandiMandi card, gradient end"],
-  ["thandimandi-a", "on-primary", 4.5, "ThandiMandi badge"],
-  ["error", "surface", 4.5, "form errors"],
-  ["ok", "surface", 4.5, "form success"],
-  ["control", "surface", 3, "input edges"],
+  ["text-primary", "bg-canvas", 4.5, "body text"],
+  ["text-primary", "bg-surface", 4.5, "text on cards"],
+  ["text-primary", "bg-subtle", 4.5, "selected tab"],
+  ["text-secondary", "bg-canvas", 4.5, "secondary text"],
+  ["text-secondary", "bg-surface", 4.5, "secondary text on cards"],
+  ["text-secondary", "bg-subtle", 4.5, "pills and quiet status"],
+  ["accent-primary", "bg-canvas", 4.5, "links and focus"],
+  ["accent-primary", "bg-surface", 4.5, "links on cards"],
+  ["on-accent", "accent-primary", 4.5, "primary button"],
+  ["on-accent", "accent-primary-hover", 4.5, "primary button on hover"],
+  ["text-primary", "accent-soft", 4.5, "attendance result"],
+  ["accent-primary", "accent-soft", 3, "tick on the result"],
+  ["highlight-text", "highlight-soft", 4.5, "status pill text"],
+  ["accent-highlight", "bg-surface", 3, "status dot and logo tittle"],
+  ["error", "bg-surface", 4.5, "form errors"],
+  ["text-primary", "error-soft", 4.5, "fallback text"],
+  ["highlight-text", "bg-surface", 4.5, "counter warning"],
+  ["border-control", "bg-canvas", 3, "input edges"],
+  ["border-control", "bg-surface", 3, "input edges on cards"],
+  ["bg-canvas", "text-primary", 4.5, "logo j and skip link"],
 ];
 
-let failed = 0;
-for (const [fg, bg, min, use] of pairs) {
-  if (!tokens[fg] || !tokens[bg]) { console.log(`MISSING  --${!tokens[fg] ? fg : bg} (${use})`); failed++; continue; }
-  const r = ratio(tokens[fg], tokens[bg]);
-  const ok = r >= min;
-  if (!ok) failed++;
-  console.log(`${ok ? "pass" : "FAIL"}  ${r.toFixed(2).padStart(5)}:1  (min ${min})  --${fg} on --${bg}  ${use}`);
+let failed = 0, total = 0;
+for (const [name, t] of Object.entries(themes)) {
+  console.log(`\n${name}`);
+  for (const [fg, bg, min, use] of pairs) {
+    total++;
+    if (!t[fg] || !t[bg]) { console.log(`MISSING  --${!t[fg] ? fg : bg} (${use})`); failed++; continue; }
+    const r = ratio(t[fg], t[bg]);
+    if (r < min) failed++;
+    console.log(`${r >= min ? "pass" : "FAIL"}  ${r.toFixed(2).padStart(5)}:1  (min ${min})  --${fg} on --${bg}  ${use}`);
+  }
 }
-console.log(failed ? `\n${failed} pair(s) failed` : `\nAll ${pairs.length} pairs pass`);
+console.log(failed ? `\n${failed} of ${total} pair(s) failed` : `\nAll ${total} pairs pass`);
 process.exit(failed ? 1 : 0);

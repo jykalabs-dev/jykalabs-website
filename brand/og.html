@@ -1,19 +1,21 @@
 <!doctype html><html><head><meta charset="utf-8">
-<!-- Source of docs/og-image.png (1200x630). Render with tools/render.mjs. -->
+<!-- Source of docs/og-image.png (1200x630). Rendered with Playwright from the repo root. -->
 <link rel="stylesheet" href="../docs/styles.css">
 <style>
 html,body{margin:0;width:1200px;height:630px;overflow:hidden}
-body{background:var(--canvas);padding:40px;box-sizing:border-box}
-.panel{height:100%;border-radius:36px;background:linear-gradient(135deg in oklch,var(--hero-a),var(--hero-b));color:var(--on-primary);padding:64px 72px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-.panel .brand{color:var(--on-primary);display:flex;align-items:center;gap:18px;font:700 40px/1 var(--font-display);letter-spacing:-1.2px}
-.brand img{width:60px;height:60px;border-radius:14px;box-shadow:0 0 0 3px var(--on-primary)}
-h1{margin:0;color:var(--on-primary);font:750 92px/0.96 var(--font-display);letter-spacing:-3.6px;max-width:760px}
-.row{display:flex;gap:14px}
-.chip{font:600 24px/1 var(--font-body);padding:14px 22px;border-radius:999px;color:var(--ink)}
-.c1{background:var(--tile-violet)}.c2{background:var(--tile-cyan)}.c3{background:var(--tile-mint)}.c4{background:var(--tile-pink)}
-.url{position:absolute;right:72px;top:72px;font:500 26px/1 var(--font-body);color:var(--hero-muted)}
-</style></head><body><div class="panel">
-<div class="brand"><img src="../docs/favicon.svg" alt="">Jyka Labs</div><span class="url">jykalabs.com</span>
+body{display:grid;grid-template-columns:1fr 430px;background:var(--bg-canvas)}
+.l{padding:72px 64px 64px 80px;display:flex;flex-direction:column;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:16px}
+.brand img{width:56px;height:56px}
+.brand .brand-name{font-size:34px}
+h1{margin:0;font:700 76px/1.02 var(--font-display);letter-spacing:-2.6px}
+.foot{display:flex;gap:28px;align-items:center;font:500 20px/1 var(--font-mono);color:var(--text-secondary);border-top:1px solid var(--border-hairline);padding-top:24px}
+.foot b{color:var(--accent-primary);font-weight:500;margin-left:auto}
+.r{background:url(../docs/media/gate-800.webp) center/cover;border-left:1px solid var(--border-hairline)}
+</style></head><body>
+<div class="l">
+<div class="brand"><img src="../docs/favicon.svg" alt=""><span class="brand-name">Jyka <span>Labs</span></span></div>
 <h1>We build and run digital products.</h1>
-<div class="row"><span class="chip c1">Software and apps</span><span class="chip c2">Platforms</span><span class="chip c3">AI and data</span><span class="chip c4">Products</span></div>
-</div></body></html>
+<div class="foot"><span>OneMuster</span><span>ThandiMandi</span><b>jykalabs.com</b></div>
+</div><div class="r"></div>
+</body></html>

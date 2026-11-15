@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jyka Labs | We build and run digital products</title>
-  <meta name="description" content="Jyka Labs is a technology company that designs, builds and operates software products, platforms and brands: SaaS, web and mobile apps, marketplaces, and AI and data solutions.">
-  <meta name="theme-color" content="#FBFAFF">
+  <meta name="description" content="Jyka Labs is a software company. We build and operate our own products, OneMuster and ThandiMandi, and work with a small number of partners on theirs.">
+  <meta name="theme-color" content="#F8F8F6">
   <link rel="canonical" href="https://jykalabs.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Jyka Labs">
   <meta property="og:title" content="Jyka Labs: we build and run digital products">
-  <meta property="og:description" content="A technology company that designs, builds and operates software products, platforms and brands.">
+  <meta property="og:description" content="A software company that builds and operates its own products, and works with a small number of partners on theirs.">
   <meta property="og:url" content="https://jykalabs.com/">
   <meta property="og:image" content="https://jykalabs.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -20,11 +20,20 @@
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jyka Labs: we build and run digital products">
-  <meta name="twitter:description" content="A technology company that designs, builds and operates software products, platforms and brands.">
+  <meta name="twitter:description" content="A software company that builds and operates its own products, and works with a small number of partners on theirs.">
   <meta name="twitter:image" content="https://jykalabs.com/og-image.png">
   <meta name="twitter:image:alt" content="Jyka Labs: we build and run digital products.">
-  <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Theme before first paint: the visitor's saved choice (kept in this browser only, never a cookie), else light. -->
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem("jyka-theme"); } catch (e) {}
+      if (t === "dark") d.setAttribute("data-theme", "dark");
+      d.classList.add("js");
+    })();
+  </script>
+  <link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -34,12 +43,8 @@
     "url": "https://jykalabs.com/",
     "logo": "https://jykalabs.com/favicon.svg",
     "email": "support@jykalabs.com",
-    "description": "A technology company that designs, builds and operates software products, platforms and brands.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "support@jykalabs.com"
-    }
+    "description": "A software company that builds and operates its own products, and works with a small number of partners on theirs.",
+    "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@jykalabs.com" }
   }
   </script>
   <script src="main.js" defer></script>
@@ -48,84 +53,128 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <svg class="sprite" aria-hidden="true" focusable="false">
-    <symbol id="logo-mark" viewBox="0 0 40 40">
-      <rect width="40" height="40" rx="10" fill="var(--primary)"/>
-      <path d="M23 15.5v12.25a6.25 6.25 0 0 1-6.25 6.25H14" fill="none" stroke="var(--on-primary)" stroke-width="4.25" stroke-linecap="round"/>
-      <circle cx="23" cy="9" r="2.9" fill="var(--tile-cyan)"/>
+    <symbol id="logo-mark" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="7" fill="var(--text-primary)"/>
+      <path d="M18 13.5v8.25a4.75 4.75 0 0 1-4.75 4.75H11" fill="none" stroke="var(--bg-canvas)" stroke-width="3.5" stroke-linecap="square"/>
+      <rect x="16" y="5.5" width="4" height="4" fill="var(--accent-highlight)"/>
     </symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
     <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
     <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
-    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2z"/></symbol>
-    <symbol id="i-key" viewBox="0 0 24 24"><path d="M8.5 15.5a4.5 4.5 0 1 1 3.9-6.75L21 8.75V12h-2v2h-2.5v-2h-4.1a4.5 4.5 0 0 1-3.9 3.5zM7.5 11h.01"/></symbol>
-    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M11 17l2 2a1.4 1.4 0 0 0 2-2M13 15l2.5 2.5a1.4 1.4 0 0 0 2-2l-3-3M2 12l4-4 4 1 3-2 3 1 6 6-3 3M2 12l4 4"/></symbol>
-    <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 20v-1.5A3.5 3.5 0 0 0 12.5 15h-5A3.5 3.5 0 0 0 4 18.5V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M20 20v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.15a3.5 3.5 0 0 1 0 6.7"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 5v14l11-7z"/></symbol>
   </svg>
 
   <header class="site-header" id="top">
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="Jyka Labs, back to top">
         <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
-        <span class="brand-name">Jyka Labs</span>
+        <span class="brand-name">Jyka <span>Labs</span></span>
       </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="#products">Products</a></li>
           <li><a href="#what-we-do">What we do</a></li>
-          <li><a href="#how">How we work</a></li>
+          <li><a href="#how-we-work">How we work</a></li>
           <li><a href="#work-with-us">Work with us</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary btn-sm header-cta" href="#contact">Talk to us</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-pressed="false" aria-label="Dark theme" hidden>
+          <svg class="ico i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="ico i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm header-cta" href="#work-with-us"><span class="cta-long">Start a conversation</span><span class="cta-short">Contact</span></a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero glow" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero-panel on-gradient">
-          <div class="hero-copy">
-            <h1 id="hero-title">We build and run digital products.</h1>
-            <p class="hero-lede">Jyka Labs designs, builds and operates software products, platforms and brands, from SaaS and mobile apps to marketplaces and AI-driven tools.</p>
-            <div class="hero-actions">
-              <a class="btn btn-light" href="#contact">Talk to us</a>
-              <a class="btn btn-ghost-light" href="#products">See our products</a>
-            </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">We build and run digital products.</h1>
+          <p class="hero-lede">Jyka Labs is a software company. We build and operate our own products, and work with a small number of partners on theirs.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work-with-us">Start a conversation</a>
+            <a class="link-quiet" href="#products">See our products<svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
           </div>
+          <p class="trust mono">Zero cookies · Zero tracking</p>
+        </div>
 
-          <div class="previews" role="img" aria-label="Illustrations of our two products in development: the OneMuster guard app and the ThandiMandi requirement form.">
-            <div class="preview preview-om" aria-hidden="true">
-              <div class="preview-head"><span class="preview-name">OneMuster</span><span class="preview-tag">Guard app</span></div>
-              <div class="preview-screen">
-                <div>
-                  <p class="preview-label">Your duty today</p>
-                  <p class="preview-title">Main gate, day shift</p>
+        <div class="stage" data-stage>
+          <div class="stage-tabs" role="tablist" aria-label="Product preview" data-stage-tabs hidden>
+            <button class="stage-tab" type="button" role="tab" id="tab-om" aria-controls="panel-om" aria-selected="true">OneMuster</button>
+            <button class="stage-tab" type="button" role="tab" id="tab-tm" aria-controls="panel-tm" aria-selected="false" tabindex="-1">ThandiMandi</button>
+          </div>
+          <div class="stage-frame">
+            <!-- OneMuster: the guard app at a society gate. Labels are the app's own English, Hindi and Marathi text. -->
+            <div class="stage-panel" id="panel-om" role="tabpanel" aria-labelledby="tab-om" data-om>
+              <img class="stage-photo" src="media/gate-1400.webp" srcset="media/gate-800.webp 800w, media/gate-1400.webp 1400w" sizes="(min-width: 1000px) 40rem, 100vw" width="1400" height="1055" alt="" fetchpriority="high">
+              <div class="device" lang="en">
+                <div class="device-head">
+                  <span class="device-app">OneMuster</span>
+                  <span class="device-meta mono">Guard app</span>
                 </div>
-                <ul class="preview-list">
-                  <li><svg class="ico"><use href="#i-check"/></svg>Selfie and location</li>
-                  <li><svg class="ico"><use href="#i-check"/></svg>Works offline</li>
-                  <li><svg class="ico"><use href="#i-check"/></svg>English, Hindi, Marathi</li>
-                </ul>
-                <span class="preview-btn">Mark attendance</span>
-              </div>
-            </div>
-            <div class="preview preview-tm" aria-hidden="true">
-              <div class="preview-head"><span class="preview-name">ThandiMandi</span><span class="preview-tag">Post a requirement</span></div>
-              <div class="preview-screen">
-                <div>
-                  <p class="preview-label">What do you need?</p>
-                  <p class="preview-field">A cold room for a dairy unit</p>
+                <div class="lang-switch" role="group" aria-label="Language of the preview" data-langs hidden>
+                  <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
+                  <button type="button" data-lang="hi" lang="hi" aria-pressed="false">हिन्दी</button>
+                  <button type="button" data-lang="mr" lang="mr" aria-pressed="false">मराठी</button>
                 </div>
-                <ul class="preview-list">
-                  <li><svg class="ico"><use href="#i-check"/></svg>Screened by our team</li>
-                  <li><svg class="ico"><use href="#i-check"/></svg>Up to five companies respond</li>
-                </ul>
-                <span class="preview-btn">Post requirement</span>
+                <div>
+                  <p class="device-label" data-t="Today">Today</p>
+                  <p class="device-title">Main gate · <span data-t="Day">Day</span> 08:00–20:00</p>
+                </div>
+                <div class="pills">
+                  <button class="pill" type="button" aria-pressed="false" data-offline hidden><span class="dot" aria-hidden="true"></span><span data-t="Offline">Offline</span></button>
+                  <span class="pill pill-ok"><span class="dot" aria-hidden="true"></span><span data-t="Selfie and location">Selfie and location</span></span>
+                </div>
+                <button class="device-action" type="button" data-mark hidden><span data-t="Mark attendance">Mark attendance</span></button>
+                <div class="device-result" data-result hidden>
+                  <p class="device-result-title"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-t="Attendance marked">Attendance marked</span></p>
+                  <p class="device-result-meta"><span data-marked-at></span><span data-t="On time">On time</span><span data-sync></span></p>
+                </div>
+                <button class="device-reset" type="button" data-reset hidden>Reset preview</button>
+                <p class="visually-hidden" aria-live="polite" data-om-live></p>
               </div>
+              <p class="stage-caption mono">Illustrative photo and screen</p>
             </div>
-            <p class="previews-note" aria-hidden="true">Illustrations of products in development.</p>
+
+            <!-- ThandiMandi: posting a requirement for a cold room. -->
+            <div class="stage-panel" id="panel-tm" role="tabpanel" aria-labelledby="tab-tm" hidden data-tm>
+              <img class="stage-photo" src="media/cold-1400.webp" srcset="media/cold-800.webp 800w, media/cold-1400.webp 1400w" sizes="(min-width: 1000px) 40rem, 100vw" width="1400" height="1055" alt="" loading="lazy">
+              <div class="device">
+                <div class="device-head">
+                  <span class="device-app">ThandiMandi</span>
+                  <span class="device-meta mono">Post a requirement</span>
+                </div>
+                <div>
+                  <p class="device-label">What do you need?</p>
+                  <p class="device-field">A cold room for a dairy unit</p>
+                </div>
+                <div class="pills"><span class="pill pill-ok"><span class="dot" aria-hidden="true"></span>Reviewed by our team</span></div>
+                <button class="device-action" type="button" data-post>Post requirement</button>
+                <div data-quotes hidden>
+                  <p class="device-label" style="margin-bottom:0.4rem">Up to five suppliers respond</p>
+                  <ul class="quotes" data-quote-list>
+                    <li class="quote-row"><b>Response 1</b><span>Site visit offered</span></li>
+                    <li class="quote-row"><b>Response 2</b><span class="bar" style="--w:65%"></span><span class="visually-hidden">Being prepared</span></li>
+                    <li class="quote-row"><b>Response 3</b><span class="bar" style="--w:30%"></span><span class="visually-hidden">Being prepared</span></li>
+                  </ul>
+                </div>
+                <button class="device-reset" type="button" data-tm-reset hidden>Reset preview</button>
+                <p class="visually-hidden" aria-live="polite" data-tm-live></p>
+              </div>
+              <p class="stage-caption mono">Illustrative photo and screen</p>
+            </div>
           </div>
         </div>
       </div>
@@ -133,153 +182,171 @@
 
     <section class="section" id="products" aria-labelledby="products-title">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <h2 id="products-title">Our products</h2>
-          <p>Products we are building and will run ourselves.</p>
+          <p>Software we own and operate, each for an industry where much of the daily work is still done on paper and by phone.</p>
         </div>
-        <ul class="products">
-          <li class="product product-om">
-            <svg class="product-mark" viewBox="0 0 120 120" aria-hidden="true">
-              <path d="M60 14 24 28v26c0 23 15 41 36 50 21-9 36-27 36-50V28z"/>
-              <path d="m44 60 11 11 22-23"/>
-            </svg>
-            <span class="badge">Coming soon</span>
-            <h3>OneMuster</h3>
-            <p>Security and facility management for housing societies and workplaces.</p>
-            <a class="product-link" href="https://onemuster.com/" rel="noopener">Visit onemuster.com<svg class="ico" aria-hidden="true"><use href="#i-external"/></svg></a>
-          </li>
-          <li class="product product-tm">
-            <svg class="product-mark" viewBox="0 0 120 120" aria-hidden="true">
-              <path d="M60 14v92M20 37l80 46M20 83l80-46"/>
-              <path d="m50 22 10 8 10-8M50 98l10-8 10 8M25 50l12-2 4-11M95 70l-12 2-4 11M25 70l12 2 4 11M95 50l-12-2-4-11"/>
-            </svg>
-            <span class="badge">Coming soon</span>
-            <h3>ThandiMandi</h3>
-            <p>A discovery platform for India's refrigeration and cold chain industry.</p>
-          </li>
-        </ul>
+        <div class="bento">
+          <article class="bento-card" data-reveal>
+            <div class="bento-media"><img src="media/register-800.webp" srcset="media/register-800.webp 800w, media/register-1400.webp 1400w" sizes="(min-width: 900px) 42rem, 100vw" width="800" height="452" alt="" loading="lazy"></div>
+            <div class="bento-body">
+              <div class="bento-top"><h3>OneMuster</h3><span class="status">Early access</span></div>
+              <p class="bento-summary">Security and facility management for security agencies and the housing societies they serve.</p>
+              <dl class="frame">
+                <div><dt>The work today</dt><dd>Duties, attendance and bills tracked across sites on paper registers, phone calls and chat groups.</dd></div>
+                <div><dt>What it does</dt><dd>
+                  <ul class="facts">
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Duty planning by site and post</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Attendance with a selfie and location, also without signal</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Monthly bills prepared from the duties completed</li>
+                  </ul>
+                </dd></div>
+              </dl>
+              <div class="bento-foot"><a class="link-quiet link-out" href="https://onemuster.com/" rel="noopener">Visit onemuster.com<svg class="ico" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+            </div>
+          </article>
+          <article class="bento-card is-narrow" data-reveal>
+            <div class="bento-media"><img src="media/dock-800.webp" srcset="media/dock-800.webp 800w, media/dock-1400.webp 1400w" sizes="(min-width: 900px) 30rem, 100vw" width="800" height="452" alt="" loading="lazy"></div>
+            <div class="bento-body">
+              <div class="bento-top"><h3>ThandiMandi</h3><span class="status status-quiet">In development</span></div>
+              <p class="bento-summary">A discovery and information platform for India's refrigeration and cold-chain industry.</p>
+              <dl class="frame">
+                <div><dt>The work today</dt><dd>Buyers find suppliers by word of mouth and scattered listings.</dd></div>
+                <div><dt>What it does</dt><dd>
+                  <ul class="facts">
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>A directory of companies, products, services and professionals</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Requirements reviewed before suppliers respond</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Guides and calculators for the trade</li>
+                  </ul>
+                </dd></div>
+              </dl>
+              <div class="bento-foot"><p>Not yet available to the public.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ambient" aria-label="Where our software is used">
+      <video class="ambient-media" data-ambient muted loop playsinline preload="none" poster="media/city-1600.webp" aria-hidden="true">
+        <source src="media/city-loop.mp4" type="video/mp4">
+      </video>
+      <div class="container ambient-copy">
+        <p>Software for work that still runs on paper registers and phone calls.</p>
+        <div class="ambient-tools">
+          <span class="ambient-note mono">Illustrative footage</span>
+          <button class="ambient-toggle" type="button" data-ambient-toggle aria-pressed="false" aria-label="Play background video" hidden>
+            <svg class="ico i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            <svg class="ico i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="section" id="what-we-do" aria-labelledby="wwd-title">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <h2 id="wwd-title">What we do</h2>
-          <p>We build products we own and operate, and we build for partners. The work spans the whole life of a product: idea, design, engineering, launch and years of running it well.</p>
+          <p>We cover the whole life of a product: research, design, engineering, launch and day-to-day operation. The team that builds the software also runs it.</p>
         </div>
-        <ul class="groups">
-          <li class="group group-violet group-wide">
-            <span class="group-icon"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
+        <ul class="grid-2x2" data-reveal>
+          <li class="grid-cell">
+            <div class="cell-head"><span class="cell-icon"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span><span class="cell-num" aria-hidden="true">A</span></div>
             <h3>Software and apps</h3>
-            <ul class="services">
-              <li><h4>Software development</h4><p>Custom software and IT services, engineered to last and easy to change.</p></li>
-              <li><h4>Web and mobile apps</h4><p>Fast, accessible apps that work on any phone, in the languages people speak.</p></li>
-            </ul>
+            <dl>
+              <div><dt>Software development</dt><dd>Custom software, written to be maintained and changed over time.</dd></div>
+              <div><dt>Web and mobile apps</dt><dd>Apps that work on low-cost phones and slow networks, in the languages people use.</dd></div>
+            </dl>
           </li>
-          <li class="group group-cyan">
-            <span class="group-icon"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <li class="grid-cell">
+            <div class="cell-head"><span class="cell-icon"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span><span class="cell-num" aria-hidden="true">B</span></div>
             <h3>Platforms and marketplaces</h3>
-            <ul class="services">
-              <li><h4>SaaS and platforms</h4><p>Subscription software and platforms that serve many businesses from one secure base.</p></li>
-              <li><h4>Marketplaces and communities</h4><p>Platforms that connect buyers, sellers and professionals, and earn their trust.</p></li>
-            </ul>
+            <dl>
+              <div><dt>SaaS and platforms</dt><dd>Subscription software that serves many organisations from one secure system.</dd></div>
+              <div><dt>Marketplaces and communities</dt><dd>Platforms that connect buyers, sellers and professionals.</dd></div>
+            </dl>
           </li>
-          <li class="group group-mint">
-            <span class="group-icon"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg></span>
-            <h3>AI, data and automation</h3>
-            <ul class="services">
-              <li><p>Analytics and automation that take repetitive work off people's hands.</p></li>
-            </ul>
+          <li class="grid-cell">
+            <div class="cell-head"><span class="cell-icon"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="cell-num" aria-hidden="true">C</span></div>
+            <h3>Data and automation</h3>
+            <p>Reports and dashboards from the data a business already has, and automation of routine, repetitive tasks.</p>
           </li>
-          <li class="group group-pink group-wide">
-            <span class="group-icon"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg></span>
+          <li class="grid-cell">
+            <div class="cell-head"><span class="cell-icon"><svg class="ico" aria-hidden="true"><use href="#i-box"/></svg></span><span class="cell-num" aria-hidden="true">D</span></div>
             <h3>Products and licensing</h3>
-            <ul class="services">
-              <li><h4>Digital products and services</h4><p>Online services and brands, built and run end to end.</p></li>
-              <li><h4>Licensing and subscriptions</h4><p>Product development, licensing and subscription services for businesses that want proven software.</p></li>
-            </ul>
+            <dl>
+              <div><dt>Digital products and services</dt><dd>Online products and services, built and operated end to end.</dd></div>
+              <div><dt>Licensing and subscriptions</dt><dd>Our software, available to license or by subscription.</dd></div>
+            </dl>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section band" id="how" aria-labelledby="how-title">
+    <section class="section" id="how-we-work" aria-labelledby="hww-title">
       <div class="container">
-        <div class="section-head">
-          <h2 id="how-title">How we work</h2>
-          <p>Products, not projects. We stay with what we build, so we build it to last.</p>
+        <div class="section-head" data-reveal>
+          <h2 id="hww-title">How we work</h2>
+          <p>Four habits we apply to our own products and to partner work.</p>
         </div>
-        <ol class="steps">
-          <li>
-            <span class="step-num" aria-hidden="true">1</span>
-            <h3>Start with the problem</h3>
-            <p>We learn how the work is done today before we design a single screen.</p>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">2</span>
-            <h3>Design for real conditions</h3>
-            <p>Low-cost phones, weak networks, many languages. If it works there, it works everywhere.</p>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">3</span>
-            <h3>Ship early, improve often</h3>
-            <p>Working software in people's hands quickly, then better with every release.</p>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">4</span>
-            <h3>Run it for the long term</h3>
-            <p>Security, privacy, support and updates for as long as people rely on it.</p>
-          </li>
-        </ol>
+        <div class="stepper" data-stepper>
+          <div class="stepper-line" aria-hidden="true"><span></span></div>
+          <ol class="steps-list" style="display:contents">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3><span class="visually-hidden">Step 1: </span>Start with the problem</h3>
+              <p>We learn how the job is done today before we design anything.</p>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3><span class="visually-hidden">Step 2: </span>Design for real conditions</h3>
+              <p>Low-cost phones, weak networks and more than one language are the starting point.</p>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3><span class="visually-hidden">Step 3: </span>Release early, then improve</h3>
+              <p>A working version in people's hands early, then regular updates based on how it is used.</p>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">04</span>
+              <h3><span class="visually-hidden">Step 4: </span>Run it for the long term</h3>
+              <p>Security, privacy, support and updates for as long as the software is in use.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <section class="section" id="work-with-us" aria-labelledby="wwu-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="wwu-title">Work with us</h2>
-          <p>Whatever brings you here, the form below reaches the founding team.</p>
-        </div>
-        <ul class="paths">
-          <li>
-            <span class="path-icon"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
-            <h3>Build a product with us</h3>
-            <p>Bring an idea or a problem. We design, build and run it with the same care as our own products.</p>
-            <a class="btn btn-secondary" href="#contact" data-topic="Build a product with us" aria-label="Talk to us about building a product">Talk to us</a>
-          </li>
-          <li>
-            <span class="path-icon"><svg class="ico" aria-hidden="true"><use href="#i-handshake"/></svg></span>
-            <h3>Partners and investors</h3>
-            <p>Licensing, distribution, partnerships or investment: we'd like to hear from you.</p>
-            <a class="btn btn-secondary" href="#contact" data-topic="Partnership or investment" aria-label="Talk to us about a partnership or investment">Talk to us</a>
-          </li>
-          <li>
-            <span class="path-icon"><svg class="ico" aria-hidden="true"><use href="#i-people"/></svg></span>
-            <h3>Join the team</h3>
-            <p>Engineers and designers who care about the people using their work.</p>
-            <a class="btn btn-secondary" href="#contact" data-topic="Joining Jyka Labs" aria-label="Talk to us about joining the team">Talk to us</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section glow" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <h2 id="contact-title">Let's talk</h2>
-          <p>Tell us what you have in mind. We read every message and reply by email.</p>
-          <div class="email-card frost">
-            <span>Prefer email? Write to us at</span>
-            <a href="mailto:support@jykalabs.com">support@jykalabs.com</a>
+      <div class="container talk-grid">
+        <div class="talk-copy" data-reveal>
+          <div class="section-head" style="margin-bottom:0">
+            <h2 id="wwu-title">Let's talk</h2>
+            <p>Tell us briefly what you have in mind. Choose what it is about, and we reply by email.</p>
           </div>
-          <ul class="contact-points">
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>A reply from the people who build our products</li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No mailing lists, no sales follow-ups</li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Your details used only to reply to you</li>
-          </ul>
+          <div class="audiences" role="group" aria-label="What is it about?">
+            <a class="audience" href="#contact" data-topic="Build a product with us">
+              <span class="audience-title">Build a product with us</span>
+              <span class="audience-text">If you have a product in mind, we can design, build and operate it with you.</span>
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="audience" href="#contact" data-topic="Partnership or investment">
+              <span class="audience-title">Partners and investors</span>
+              <span class="audience-text">For licensing, distribution, partnerships or investment.</span>
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="audience" href="#contact" data-topic="Joining Jyka Labs">
+              <span class="audience-title">Join the team</span>
+              <span class="audience-text">We are glad to hear from engineers and designers interested in this kind of work.</span>
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <p class="promise"><strong>A reply from the people who build our products.</strong> No mailing lists, no sales follow-ups.</p>
+          <p class="email-direct"><span>Or write to us directly</span><a href="mailto:support@jykalabs.com">support@jykalabs.com</a></p>
         </div>
 
-        <div class="form-card frost">
+        <div class="form-card" id="contact" data-reveal>
+          <h3 class="form-title">Send a message</h3>
           <!-- Without JavaScript the form posts straight to Web3Forms, which then opens thanks.html.
                With JavaScript, main.js validates it, sends it and shows the result in place. -->
           <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="post" novalidate>
@@ -321,7 +388,7 @@
               <div class="field field-wide">
                 <label for="f-message">Message</label>
                 <textarea id="f-message" name="message" rows="6" required minlength="10" maxlength="5000" aria-describedby="h-message e-message"></textarea>
-                <p class="field-hint" id="h-message">10 to 5,000 characters.</p>
+                <div class="field-meta"><p id="h-message">10 to 5,000 characters.</p><p class="counter mono" data-counter aria-hidden="true" hidden>0 / 5,000</p></div>
                 <p class="field-error" id="e-message" hidden></p>
               </div>
               <div class="form-actions field-wide">
@@ -332,7 +399,7 @@
 
             <div class="fallback" id="fallback" hidden>
               <p>You can also email us at <a href="mailto:support@jykalabs.com">support@jykalabs.com</a></p>
-              <a class="btn btn-secondary" id="fallback-mail" href="mailto:support@jykalabs.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email your message instead</a>
+              <a class="btn btn-ghost" id="fallback-mail" href="mailto:support@jykalabs.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email your message instead</a>
             </div>
 
             <p class="privacy" id="privacy">We use what you send only to reply to you. When you press Send, your name, email, company, topic and message go to Web3Forms, a form delivery service, which emails them to us at support@jykalabs.com. We delete them when the conversation is over, or sooner if you ask. This site sets no cookies and runs no tracking.</p>
@@ -353,18 +420,18 @@
       <div class="footer-brand">
         <a class="brand" href="#top" aria-label="Jyka Labs, back to top">
           <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
-          <span class="brand-name">Jyka Labs</span>
+          <span class="brand-name">Jyka <span>Labs</span></span>
         </a>
-        <p>We build and run digital products.</p>
-        <p><a class="footer-email" href="mailto:support@jykalabs.com">support@jykalabs.com</a></p>
+        <p>We build and run digital products: our own, and a few with partners.</p>
+        <a class="footer-email" href="mailto:support@jykalabs.com">support@jykalabs.com</a>
       </div>
-      <p class="footer-note">This site sets no cookies and runs no tracking. What you send through the form is used only to reply to you (<a href="#privacy">how we handle it</a>).</p>
+      <p class="footer-note">This site sets no cookies and runs no tracking. Your theme choice is kept only in your browser. What you send through the form is used only to reply to you (<a href="#privacy">how we handle it</a>).</p>
       <nav aria-label="Footer">
         <ul class="footer-links">
           <li><a href="#products">Products</a></li>
           <li><a href="#what-we-do">What we do</a></li>
-          <li><a href="#how">How we work</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#how-we-work">How we work</a></li>
+          <li><a href="#work-with-us">Contact</a></li>
         </ul>
       </nav>
     </div>
