@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jyka Labs | We build and run digital products</title>
-  <meta name="description" content="Jyka Labs is a software company. We build and operate our own products, OneMuster and ThandiMandi, and work with a small number of partners on theirs.">
+  <meta name="description" content="Jyka Labs is a software company. We build and operate our own products, OneMuster and ThandiMandi, and build software for other companies too.">
   <meta name="theme-color" content="#F8F8F6">
   <link rel="canonical" href="https://jykalabs.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Jyka Labs">
   <meta property="og:title" content="Jyka Labs: we build and run digital products">
-  <meta property="og:description" content="A software company that builds and operates its own products, and works with a small number of partners on theirs.">
+  <meta property="og:description" content="A software company that builds and operates its own products.">
   <meta property="og:url" content="https://jykalabs.com/">
   <meta property="og:image" content="https://jykalabs.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jyka Labs: we build and run digital products">
-  <meta name="twitter:description" content="A software company that builds and operates its own products, and works with a small number of partners on theirs.">
+  <meta name="twitter:description" content="A software company that builds and operates its own products.">
   <meta name="twitter:image" content="https://jykalabs.com/og-image.png">
   <meta name="twitter:image:alt" content="Jyka Labs: we build and run digital products.">
   <!-- Theme before first paint: the visitor's saved choice (kept in this browser only, never a cookie), else light. -->
@@ -43,7 +43,7 @@
     "url": "https://jykalabs.com/",
     "logo": "https://jykalabs.com/favicon.svg",
     "email": "support@jykalabs.com",
-    "description": "A software company that builds and operates its own products, and works with a small number of partners on theirs.",
+    "description": "A software company that builds and operates its own products.",
     "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@jykalabs.com" }
   }
   </script>
@@ -95,7 +95,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1 id="hero-title">We build and run digital products.</h1>
-          <p class="hero-lede">Jyka Labs is a software company. We build and operate our own products, and work with a small number of partners on theirs.</p>
+          <p class="hero-lede">Jyka Labs is a software company. We build and operate our own products, and we build software for other companies too.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work-with-us">Start a conversation</a>
             <a class="link-quiet" href="#products">See our products<svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
@@ -108,64 +108,24 @@
             <button class="stage-tab" type="button" role="tab" id="tab-tm" aria-controls="panel-tm" aria-selected="false" tabindex="-1">ThandiMandi</button>
           </div>
           <div class="stage-frame">
-            <!-- OneMuster: the guard app at a society gate. Labels are the app's own English, Hindi and Marathi text. -->
-            <div class="stage-panel" id="panel-om" role="tabpanel" aria-labelledby="tab-om" data-om>
+            <!-- Each product at a glance: the setting it serves, its name, status and one line. No feature detail by design. -->
+            <div class="stage-panel" id="panel-om" role="tabpanel" aria-labelledby="tab-om">
               <img class="stage-photo" src="media/gate-1400.webp" srcset="media/gate-800.webp 800w, media/gate-1400.webp 1400w" sizes="(min-width: 1000px) 40rem, 100vw" width="1400" height="1055" alt="" fetchpriority="high">
-              <div class="device" lang="en">
-                <div class="device-head">
-                  <span class="device-app">OneMuster</span>
-                  <span class="device-meta mono">Guard app</span>
-                </div>
-                <div class="lang-switch" role="group" aria-label="Language of the preview" data-langs hidden>
-                  <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
-                  <button type="button" data-lang="hi" lang="hi" aria-pressed="false">हिन्दी</button>
-                  <button type="button" data-lang="mr" lang="mr" aria-pressed="false">मराठी</button>
-                </div>
-                <div>
-                  <p class="device-label" data-t="Today">Today</p>
-                  <p class="device-title">Main gate · <span data-t="Day">Day</span> 08:00–20:00</p>
-                </div>
-                <div class="pills">
-                  <button class="pill" type="button" aria-pressed="false" data-offline hidden><span class="dot" aria-hidden="true"></span><span data-t="Offline">Offline</span></button>
-                  <span class="pill pill-ok"><span class="dot" aria-hidden="true"></span><span data-t="Selfie and location">Selfie and location</span></span>
-                </div>
-                <button class="device-action" type="button" data-mark hidden><span data-t="Mark attendance">Mark attendance</span></button>
-                <div class="device-result" data-result hidden>
-                  <p class="device-result-title"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-t="Attendance marked">Attendance marked</span></p>
-                  <p class="device-result-meta"><span data-marked-at></span><span data-t="On time">On time</span><span data-sync></span></p>
-                </div>
-                <button class="device-reset" type="button" data-reset hidden>Reset preview</button>
-                <p class="visually-hidden" aria-live="polite" data-om-live></p>
+              <div class="device">
+                <div class="device-head"><span class="device-app">OneMuster</span><span class="status">Early access</span></div>
+                <p class="device-line">Security and facility management for security agencies and housing societies.</p>
+                <a class="link-quiet link-out" href="https://onemuster.com/" rel="noopener">onemuster.com<svg class="ico" aria-hidden="true"><use href="#i-external"/></svg></a>
               </div>
-              <p class="stage-caption">Illustrative photo and screen</p>
+              <p class="stage-caption">Illustrative photo</p>
             </div>
-
-            <!-- ThandiMandi: posting a requirement for a cold room. -->
-            <div class="stage-panel" id="panel-tm" role="tabpanel" aria-labelledby="tab-tm" hidden data-tm>
+            <div class="stage-panel" id="panel-tm" role="tabpanel" aria-labelledby="tab-tm" hidden>
               <img class="stage-photo" src="media/cold-1400.webp" srcset="media/cold-800.webp 800w, media/cold-1400.webp 1400w" sizes="(min-width: 1000px) 40rem, 100vw" width="1400" height="1055" alt="" loading="lazy">
               <div class="device">
-                <div class="device-head">
-                  <span class="device-app">ThandiMandi</span>
-                  <span class="device-meta mono">Post a requirement</span>
-                </div>
-                <div>
-                  <p class="device-label">What do you need?</p>
-                  <p class="device-field">A cold room for a dairy unit</p>
-                </div>
-                <div class="pills"><span class="pill pill-ok"><span class="dot" aria-hidden="true"></span>Reviewed by our team</span></div>
-                <button class="device-action" type="button" data-post>Post requirement</button>
-                <div data-quotes hidden>
-                  <p class="device-label" style="margin-bottom:0.4rem">Up to five suppliers respond</p>
-                  <ul class="quotes" data-quote-list>
-                    <li class="quote-row"><b>Response 1</b><span>Site visit offered</span></li>
-                    <li class="quote-row"><b>Response 2</b><span class="bar" style="--w:65%"></span><span class="visually-hidden">Being prepared</span></li>
-                    <li class="quote-row"><b>Response 3</b><span class="bar" style="--w:30%"></span><span class="visually-hidden">Being prepared</span></li>
-                  </ul>
-                </div>
-                <button class="device-reset" type="button" data-tm-reset hidden>Reset preview</button>
-                <p class="visually-hidden" aria-live="polite" data-tm-live></p>
+                <div class="device-head"><span class="device-app">ThandiMandi</span><span class="status status-quiet">In development</span></div>
+                <p class="device-line">A platform for India's refrigeration and cold-chain industry.</p>
+                <p class="device-note">Not yet available to the public.</p>
               </div>
-              <p class="stage-caption">Illustrative photo and screen</p>
+              <p class="stage-caption">Illustrative photo</p>
             </div>
           </div>
         </div>
@@ -184,16 +144,6 @@
             <div class="bento-body">
               <div class="bento-top"><h3>OneMuster</h3><span class="status">Early access</span></div>
               <p class="bento-summary">Security and facility management for security agencies and the housing societies they serve.</p>
-              <dl class="frame">
-                <div><dt>The work today</dt><dd>Duties, attendance and bills tracked across sites on paper registers, phone calls and chat groups.</dd></div>
-                <div><dt>What it does</dt><dd>
-                  <ul class="facts">
-                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Duty planning by site and post</li>
-                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Attendance with a selfie and location, also without signal</li>
-                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Monthly bills prepared from the duties completed</li>
-                  </ul>
-                </dd></div>
-              </dl>
               <div class="bento-foot"><a class="link-quiet link-out" href="https://onemuster.com/" rel="noopener">Visit onemuster.com<svg class="ico" aria-hidden="true"><use href="#i-external"/></svg></a></div>
             </div>
           </article>
@@ -201,17 +151,7 @@
             <div class="bento-media"><img src="media/dock-800.webp" srcset="media/dock-800.webp 800w, media/dock-1400.webp 1400w" sizes="(min-width: 900px) 30rem, 100vw" width="800" height="452" alt="" loading="lazy"></div>
             <div class="bento-body">
               <div class="bento-top"><h3>ThandiMandi</h3><span class="status status-quiet">In development</span></div>
-              <p class="bento-summary">A discovery and information platform for India's refrigeration and cold-chain industry.</p>
-              <dl class="frame">
-                <div><dt>The work today</dt><dd>Buyers find suppliers by word of mouth and scattered listings.</dd></div>
-                <div><dt>What it does</dt><dd>
-                  <ul class="facts">
-                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>A directory of companies, products, services and professionals</li>
-                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Requirements reviewed before suppliers respond</li>
-                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Guides and calculators for the trade</li>
-                  </ul>
-                </dd></div>
-              </dl>
+              <p class="bento-summary">A platform for India's refrigeration and cold-chain industry.</p>
               <div class="bento-foot"><p>Not yet available to the public.</p></div>
             </div>
           </article>
@@ -376,7 +316,7 @@
           <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
           <span class="brand-name">Jyka <span>Labs</span></span>
         </a>
-        <p>We build and run digital products: our own, and a few with partners.</p>
+        <p>We build and run digital products.</p>
       </div>
       <nav aria-label="Footer">
         <ul class="footer-links">
