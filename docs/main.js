@@ -180,8 +180,8 @@
     });
   }
 
-  // ---------- Scroll motion: reveal once, draw the stepper line, play the city video only when visible ----------
-  var revealables = document.querySelectorAll("[data-reveal], [data-stepper]");
+  // ---------- Scroll motion: reveal once, and play the city video only when visible ----------
+  var revealables = document.querySelectorAll("[data-reveal]");
   if ("IntersectionObserver" in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

@@ -4,7 +4,14 @@
 
 ## Logo
 
-A geometric lowercase "j" (square caps) in a rounded tile that takes the primary text colour, with a square amber tittle. Files: `brand/logo-mark.svg` = `docs/favicon.svg` (light colours) = the `#logo-mark` symbol in `index.html` (follows the theme).
+"Joined JL" (chosen by the founder, 15 Nov 2026): a J and an L drawn as two 5.5-unit strokes with square ends on a 48-unit grid, the J hooking left and the L footing right, with a small amber square at the top right of the L. It stands for Jyka Labs and needs no tile. Beside it, "Jyka Labs" set in Plus Jakarta Sans 700, with "Labs" in the secondary colour.
+
+- `brand/logo-mark.svg`: ink #111312, amber #D97724, for light backgrounds.
+- `brand/logo-mark-on-dark.svg`: #F2F4F3 and #F59E0B.
+- `docs/favicon.svg`: the mark scaled to 72% inside a dark rounded tile (rx 10), readable at 16 px.
+- The `#logo-mark` symbol in `index.html` follows the theme.
+
+Drawn here from simple shapes, so it isn't copied from anyone. Before registering it, run a trademark search for similar device marks (classes 9 and 42 on ipindia.gov.in).
 
 ## Colour
 
@@ -28,14 +35,13 @@ Photos and the city loop were generated with Higgsfield (Kling O1 image, Kling 3
 
 ## Components
 
-- **Header:** sticky, translucent with blur where supported; wordmark, four links, theme toggle, "Start a conversation".
-- **Hero:** headline, intro, primary button, "See our products", "Zero cookies · Zero tracking". Right: product tabs (arrow keys, Home/End) over a photo of each product's setting with an illustrative screen. OneMuster: English/हिन्दी/मराठी using the app's own translations, an Offline toggle, and "Mark attendance" that resolves to the app's real confirmation. ThandiMandi: "Post requirement" shows up to five responses.
+- **Header:** sticky, translucent with blur where supported; wordmark, three links, theme toggle, "Start a conversation".
+- **Hero:** headline, intro, primary button, "See our products". Right: product tabs (arrow keys, Home/End) over a photo of each product's setting with an illustrative screen. OneMuster: English/हिन्दी/मराठी using the app's own translations, an Offline toggle, and "Mark attendance" that resolves to the app's real confirmation. ThandiMandi: "Post requirement" shows up to five responses.
 - **Products:** asymmetric bento (1.45 : 1), photo on top, status pill, "The work today" / "What it does".
 - **Ambient band:** the city at dawn, muted, looping only while on screen, with a pause button; a still photo with reduced motion or data saver.
 - **What we do:** a 2 × 2 hairline grid; a top rule draws in on hover.
-- **How we work:** a four-step stepper; the connecting line draws once and the numbers turn green in order.
 - **Let's talk:** three audience cards that pick the topic, bring the form into view and focus it; the form with a live character count, inline errors, "Sending…", email fallback and success in place.
 
 ## Motion
 
-160–200 ms ease-out for state changes; reveals once on scroll (12px, 420 ms); the stepper line draws over 900 ms. Under `prefers-reduced-motion` nothing moves, the video never loads, and every element shows in its final state. Without JavaScript, everything is visible and the form still posts to Web3Forms.
+160–200 ms ease-out for state changes; reveals once on scroll (12px, 420 ms). Under `prefers-reduced-motion` nothing moves, the video never loads, and every element shows in its final state. Without JavaScript, everything is visible and the form still posts to Web3Forms.
