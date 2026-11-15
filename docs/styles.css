@@ -211,6 +211,8 @@ a:hover { color: var(--accent-primary-hover); }
 .bento-card:hover { border-color: var(--border-control); }
 .bento-media { position: relative; height: clamp(10rem, 17vw, 13rem); overflow: hidden; border-bottom: 1px solid var(--border-hairline); background: var(--bg-subtle); }
 .bento-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms var(--ease-out); }
+/* Keep the subject in the top part of the photo in view (the OneMuster shield), including during the hover zoom. */
+.bento-media img.focus-top { object-position: 50% 0; transform-origin: 50% 0; }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) { .bento-card:hover .bento-media img { transform: scale(1.02); } }
 .bento-body { display: flex; flex-direction: column; gap: 0.85rem; padding: clamp(1.25rem, 2.5vw, 1.75rem); }
 .bento-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
