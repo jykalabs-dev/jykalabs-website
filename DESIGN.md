@@ -35,14 +35,18 @@ Plus Jakarta Sans 600/700 at -0.03em for headings (hero -0.035em). Inter 400/500
 
 ## Imagery
 
-Photos and the city loop were generated with Higgsfield (Kling O1 image, Kling 3.0 video) on 15 Nov 2026. The page carries no caption on them (founder, 16 Nov 2026). They show settings, never people or customers. Sources: `docs/media/` (WebP at 800 and 1400/1600 wide; `city-loop.mp4` 960×540, 5 s, silent).
+Technology still lifes in the logo's palette (obsidian, silver, copper), generated with Higgsfield on 16 Nov 2026 to replace the earlier building and street photos, which didn't read as a tech company (founder). GPT Image 2.6 for stills, Kling 3.0 for the clip. No people, screens, text or brand-like products. No captions on the page (founder, 16 Nov 2026).
+
+- Hero: `circuit` (OneMuster tab), `cooling` (ThandiMandi tab), WebP at 800 and 1168 wide.
+- Product cards: `cables` (OneMuster), `rack` (ThandiMandi), WebP at 800 and 1344.
+- Ambient band: `grid-loop.mp4` (960×540, 5 s, silent) over the `grid` still, which is also the poster under reduced motion or data saver.
 
 ## Components
 
 - **Header:** sticky, translucent with blur where supported; wordmark, three links, theme toggle, "Start a conversation".
 - **Hero:** headline, intro, primary button, "See our products". Right: product tabs (arrow keys, Home/End) over a photo of each product's setting, with a small card: name, status and one line. No feature detail: the founder keeps product specifics off the public site (15 Nov 2026).
 - **Products:** asymmetric bento (1.45 : 1), photo on top, status pill, name, status and one line only (no feature lists).
-- **Ambient band:** the city at dawn, muted, looping only while on screen, with a pause button; a still photo with reduced motion or data saver.
+- **Ambient band:** a copper-lit grid, muted, looping only while on screen, with a pause button; a still photo with reduced motion or data saver.
 - **What we do:** a 2 × 2 hairline grid, type only (no icon tiles); a top rule draws in on hover.
 - **Let's talk:** three audience cards that pick the topic, bring the form into view and focus it; the form with a live character count, inline errors, "Sending…", email fallback and success in place.
 
