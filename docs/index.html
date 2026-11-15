@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jyka Labs | We build and run digital products</title>
   <meta name="description" content="Jyka Labs is a software company. We build and operate our own products, OneMuster and ThandiMandi, and build software for other companies too.">
-  <meta name="theme-color" content="#F8F8F6">
+  <meta name="theme-color" content="#F4F4F1">
   <link rel="canonical" href="https://jykalabs.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
@@ -53,8 +53,17 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <svg class="sprite" aria-hidden="true" focusable="false">
-    <symbol id="logo-mark" viewBox="0 0 48 48">
-      <g transform="translate(1.4 1)"><path d="M19 6v24a10 10 0 0 1-10 10H6" fill="none" stroke="var(--text-primary)" stroke-width="5.5" stroke-linecap="square"/><path d="M29 6v34h10.25" fill="none" stroke="var(--text-primary)" stroke-width="5.5" stroke-linecap="square"/><rect x="36.25" y="3.25" width="5.75" height="5.75" fill="var(--accent-highlight)"/></g>
+    <defs>
+      <!-- Logo gradients take their stops from the theme tokens, so the mark switches with light and dark. -->
+      <linearGradient id="lg-jl" gradientUnits="userSpaceOnUse" x1="30" y1="30" x2="170" y2="170"><stop offset="0" style="stop-color:var(--logo-jl-1)"/><stop offset=".35" style="stop-color:var(--logo-jl-2)"/><stop offset=".65" style="stop-color:var(--logo-jl-3)"/><stop offset="1" style="stop-color:var(--logo-jl-4)"/></linearGradient>
+      <linearGradient id="lg-ring" gradientUnits="userSpaceOnUse" x1="18" y1="18" x2="182" y2="182"><stop offset="0" style="stop-color:var(--logo-ring-1)"/><stop offset=".35" style="stop-color:var(--logo-ring-2)"/><stop offset=".65" style="stop-color:var(--logo-ring-3)"/><stop offset="1" style="stop-color:var(--logo-ring-4)"/></linearGradient>
+      <linearGradient id="lg-arc" gradientUnits="userSpaceOnUse" x1="40" y1="170" x2="170" y2="30"><stop offset="0" style="stop-color:var(--logo-arc-1)"/><stop offset=".5" style="stop-color:var(--logo-arc-2)"/><stop offset="1" style="stop-color:var(--logo-arc-3)"/></linearGradient>
+      <mask id="lg-gap" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200"><rect width="200" height="200" fill="#fff"/><circle cx="100" cy="100" r="82" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-dasharray="386.4 128.8" transform="rotate(-90 100 100)"/></mask>
+    </defs>
+    <symbol id="logo-mark" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="82" fill="none" stroke="url(#lg-ring)" stroke-width="6" mask="url(#lg-gap)" style="opacity:var(--logo-ring-opacity)"/>
+      <circle cx="100" cy="100" r="82" fill="none" stroke="url(#lg-arc)" stroke-width="6" stroke-linecap="round" stroke-dasharray="386.4 128.8" transform="rotate(-90 100 100)"/>
+      <g transform="translate(100 100) scale(.66) translate(-100 -100)" fill="none" stroke="url(#lg-jl)" stroke-width="24"><path d="M84 48V124a28 28 0 0 1-28 28H48"/><path d="M116 48V152H152"/></g>
     </symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -71,7 +80,7 @@
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="Jyka Labs, back to top">
         <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
-        <span class="brand-name">Jyka <span>Labs</span></span>
+        <span class="brand-name">Jyka<span>Labs</span></span>
       </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
@@ -314,7 +323,7 @@
       <div class="footer-brand">
         <a class="brand" href="#top" aria-label="Jyka Labs, back to top">
           <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
-          <span class="brand-name">Jyka <span>Labs</span></span>
+          <span class="brand-name">Jyka<span>Labs</span></span>
         </a>
         <p>We build and run digital products.</p>
       </div>

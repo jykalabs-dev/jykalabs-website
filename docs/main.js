@@ -25,7 +25,7 @@
     if (themeToggle) {
       themeToggle.setAttribute("aria-pressed", dark ? "true" : "false");
     }
-    if (themeColor) themeColor.setAttribute("content", dark ? "#0B0D0C" : "#F8F8F6");
+    if (themeColor) themeColor.setAttribute("content", dark ? "#0A0A0C" : "#F4F4F1");
   }
   if (themeToggle) {
     applyTheme(root.getAttribute("data-theme") === "dark");

@@ -4,26 +4,30 @@
 
 ## Logo
 
-"Joined JL" (chosen by the founder, 15 Nov 2026): a J and an L drawn as two 5.5-unit strokes with square ends on a 48-unit grid, the J hooking left and the L footing right, with a small amber square at the top right of the L. It stands for Jyka Labs and needs no tile. Beside it, "Jyka Labs" set in Plus Jakarta Sans 700, with "Labs" in the secondary colour.
+"Progress Ring" (chosen by the founder, 16 Nov 2026, replacing "Joined JL"): a JL monogram inside a ring that is three-quarters complete. The JL and the ring are metal (polished silver on dark, gunmetal and steel on light); the arc is copper, with a small gap where it meets the ring. Beside or under it, "JYKALABS" in Plus Jakarta Sans: JYKA 800, LABS 500 in copper.
 
-- `brand/logo-mark.svg`: ink #111312, amber #D97724, for light backgrounds.
-- `brand/logo-mark-on-dark.svg`: #F2F4F3 and #F59E0B.
-- `docs/favicon.svg`: the mark scaled to 72% inside a dark rounded tile (rx 10), readable at 16 px.
-- The `#logo-mark` symbol in `index.html` follows the theme.
-
-Drawn here from simple shapes, so it isn't copied from anyone. Before registering it, run a trademark search for similar device marks (classes 9 and 42 on ipindia.gov.in).
+- `brand/logo-mark.svg`, `brand/logo-stacked.svg`, `brand/logo-horizontal.svg`: for light backgrounds.
+- `brand/logo-*-on-dark.svg`: the same for dark backgrounds.
+- `docs/favicon.svg`: the dark mark on an obsidian rounded tile.
+- The `#logo-mark` symbol in `index.html` takes its gradient stops from the `--logo-*` tokens, so it switches with the theme. The header wordmark is live text using `--logo-word` and `--logo-labs`.
+- The wordmark in the SVG files is live text. Convert it to outlines before print or handing files to others. Before registering the logo, run a trademark search (classes 9 and 42 on ipindia.gov.in).
 
 ## Colour
 
+Taken from the logo: obsidian, silver and copper in dark; warm white, gunmetal, steel and dark copper in light. `node tools/check-contrast.mjs` checks 24 pairs in each theme, including the wordmark and the logo's arc and ring.
+
 | Token | Light | Dark | Use |
 | --- | --- | --- | --- |
-| `--bg-canvas` / `--bg-surface` / `--bg-subtle` | #F8F8F6 / #FFFFFF / #F0F0EC | #0B0D0C / #141816 / #1C221F | page / cards / pills, selected tabs |
-| `--border-hairline` / `--border-control` | #E2E2DC / #7A817D | #232926 / #5E6762 | dividers / input edges (3:1) |
-| `--text-primary` / `--text-secondary` | #111312 / #525855 | #F2F4F3 / #949E99 | text |
-| `--accent-primary` (+ `-hover`) | #0F5C4C | #28A789 | primary buttons, links, focus, ticks |
-| `--on-accent` | #FFFFFF | #0B0D0C | text on the primary button |
-| `--accent-highlight` | #D97724 | #F59E0B | status dots, logo tittle, the Offline pill |
-| `--highlight-text` / `--highlight-soft` | #9A4E0E / #FBF0E4 | #F59E0B / #2A2112 | status pill text and fill (the brief's amber is too light for text on white) |
+| `--bg-canvas` / `--bg-surface` / `--bg-subtle` | #F4F4F1 / #FFFFFF / #ECECE8 | #0A0A0C / #131316 / #1B1B20 | page / cards / pills, selected tabs |
+| `--border-hairline` / `--border-control` | #DDDDD8 / #7E848D | #26262C / #6B7079 | dividers / input edges (3:1) |
+| `--text-primary` / `--text-secondary` | #16171B / #4E535B | #E9EBEF / #A3A8B1 | text |
+| `--accent-primary` (+ `-hover`) | #8A4520 / #6B3214 | #CC7A47 / #DA8D5C | primary buttons, links, focus |
+| `--on-accent` | #FFFFFF | #0A0A0C | text on the primary button |
+| `--accent-highlight` | #9A4E24 | #C0703F | status dots |
+| `--highlight-text` / `--highlight-soft` | #6B3214 / #F6ECE5 | #D88B5A / #24170F | status pill text and fill |
+| `--logo-*` | gunmetal JL, steel ring, #6B3214 to #93491F arc | silver JL and ring (ring at 50%), #9A4E24 to #C0703F arc | the mark and wordmark |
+
+The dark theme's links and buttons use a slightly lighter copper than the logo's arc so text meets 4.5:1 on obsidian.
 
 ## Type
 

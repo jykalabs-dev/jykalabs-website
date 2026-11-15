@@ -1,4 +1,5 @@
 /* jykalabs.com: "tactile industrial-tech". Hairlines, whitespace and quiet surfaces instead of gradients and glow.
+   Colours follow the Progress Ring logo (16 Nov 2026): obsidian, silver and copper in dark; warm white, gunmetal, steel and dark copper in light.
    Light theme by default; [data-theme="dark"] swaps the tokens. Components use only tokens.
    tools/check-contrast.mjs re-checks the text and control pairs in both themes. */
 
@@ -8,25 +9,33 @@
 
 :root {
   color-scheme: light;
-  --bg-canvas: #F8F8F6;
+  /* Light theme follows the light logo: warm white, gunmetal ink, steel silver, dark copper. */
+  --bg-canvas: #F4F4F1;
   --bg-surface: #FFFFFF;
-  --bg-subtle: #F0F0EC;
-  --border-hairline: #E2E2DC;
-  --border-control: #7A817D;
-  --text-primary: #111312;
-  --text-secondary: #525855;
-  --accent-primary: #0F5C4C;
-  --accent-primary-hover: #0A4236;
+  --bg-subtle: #ECECE8;
+  --border-hairline: #DDDDD8;
+  --border-control: #7E848D;
+  --text-primary: #16171B;
+  --text-secondary: #4E535B;
+  --accent-primary: #8A4520;
+  --accent-primary-hover: #6B3214;
   --on-accent: #FFFFFF;
-  --accent-soft: #E3EFEB;
-  --accent-highlight: #D97724;
-  --highlight-text: #9A4E0E;
-  --highlight-soft: #FBF0E4;
+  --accent-soft: #F4E9E1;
+  --accent-highlight: #9A4E24;
+  --highlight-text: #6B3214;
+  --highlight-soft: #F6ECE5;
+  /* Logo (Progress Ring): metal gradient stops, used by the #logo-mark symbol and the wordmark. */
+  --logo-jl-1: #1A1C20; --logo-jl-2: #4A4F57; --logo-jl-3: #0F1012; --logo-jl-4: #3E434A;
+  --logo-ring-1: #5E646D; --logo-ring-2: #858B94; --logo-ring-3: #6C727B; --logo-ring-4: #7E848D;
+  --logo-ring-opacity: 1;
+  --logo-arc-1: #6B3214; --logo-arc-2: #93491F; --logo-arc-3: #753818;
+  --logo-word: #16171B;
+  --logo-labs: #6B3214;
   --error: #B42318;
   --error-soft: #FDECEA;
-  --header-glass: rgb(248 248 246 / 0.78);
-  --photo-veil: rgb(17 19 18 / 0.06);
-  --shadow-card: 0 1px 0 rgb(17 19 18 / 0.04), 0 12px 32px -12px rgb(17 19 18 / 0.18);
+  --header-glass: rgb(244 244 241 / 0.78);
+  --photo-veil: rgb(22 23 27 / 0.06);
+  --shadow-card: 0 1px 0 rgb(22 23 27 / 0.04), 0 12px 32px -12px rgb(22 23 27 / 0.18);
 
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -44,23 +53,30 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg-canvas: #0B0D0C;
-  --bg-surface: #141816;
-  --bg-subtle: #1C221F;
-  --border-hairline: #232926;
-  --border-control: #5E6762;
-  --text-primary: #F2F4F3;
-  --text-secondary: #949E99;
-  --accent-primary: #28A789;
-  --accent-primary-hover: #34C2A0;
-  --on-accent: #0B0D0C;
-  --accent-soft: #15302A;
-  --accent-highlight: #F59E0B;
-  --highlight-text: #F59E0B;
-  --highlight-soft: #2A2112;
+  /* Dark theme follows the dark logo: obsidian, polished silver, copper. */
+  --bg-canvas: #0A0A0C;
+  --bg-surface: #131316;
+  --bg-subtle: #1B1B20;
+  --border-hairline: #26262C;
+  --border-control: #6B7079;
+  --text-primary: #E9EBEF;
+  --text-secondary: #A3A8B1;
+  --accent-primary: #CC7A47;
+  --accent-primary-hover: #DA8D5C;
+  --on-accent: #0A0A0C;
+  --accent-soft: #2A1A12;
+  --accent-highlight: #C0703F;
+  --highlight-text: #D88B5A;
+  --highlight-soft: #24170F;
+  --logo-jl-1: #B9BEC6; --logo-jl-2: #FFFFFF; --logo-jl-3: #AEB3BB; --logo-jl-4: #E3E6EA;
+  --logo-ring-1: #B9BEC6; --logo-ring-2: #FFFFFF; --logo-ring-3: #AEB3BB; --logo-ring-4: #E3E6EA;
+  --logo-ring-opacity: 0.5;
+  --logo-arc-1: #9A4E24; --logo-arc-2: #C0703F; --logo-arc-3: #A3552A;
+  --logo-word: #E9EBEF;
+  --logo-labs: #B5643A;
   --error: #F28B7D;
   --error-soft: #2C1916;
-  --header-glass: rgb(11 13 12 / 0.74);
+  --header-glass: rgb(10 10 12 / 0.74);
   --photo-veil: rgb(0 0 0 / 0.28);
   --shadow-card: 0 1px 0 rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.7);
 }
@@ -128,9 +144,9 @@ a:hover { color: var(--accent-primary-hover); }
 .header-row { display: flex; align-items: center; gap: 1rem; min-height: 4rem; }
 .brand { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-primary); text-decoration: none; }
 .brand:hover { color: var(--text-primary); }
-.brand-mark { width: 2rem; height: 2rem; flex-shrink: 0; }
-.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; letter-spacing: -0.03em; }
-.brand-name span { color: var(--text-secondary); font-weight: 600; }
+.brand-mark { width: 2.25rem; height: 2.25rem; flex-shrink: 0; }
+.brand-name { font-family: var(--font-display); font-weight: 800; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--logo-word); }
+.brand-name span { color: var(--logo-labs); font-weight: 500; }
 .site-nav { margin-inline: auto; }
 .site-nav ul { display: flex; gap: 0.125rem; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 0.75rem; border-radius: var(--radius-sm); color: var(--text-secondary); font-weight: 500; font-size: 0.9375rem; text-decoration: none; }
@@ -166,7 +182,7 @@ a:hover { color: var(--accent-primary-hover); }
 .stage-panel[hidden] { display: none !important; }
 .stage-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .stage-panel::before { content: ""; position: absolute; inset: 0; background: var(--photo-veil); pointer-events: none; z-index: 1; }
-.stage-caption { position: absolute; left: 0.75rem; bottom: 0.75rem; z-index: 2; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgb(11 13 12 / 0.72); color: #F2F4F3; font-size: 0.75rem; }
+.stage-caption { position: absolute; left: 0.75rem; bottom: 0.75rem; z-index: 2; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgb(10 10 12 / 0.72); color: #E9EBEF; font-size: 0.75rem; }
 .stage-panel.is-entering .device { animation: device-in 220ms var(--ease-out) both; }
 .stage-panel.is-entering .stage-photo { animation: photo-in 320ms var(--ease-out) both; }
 @keyframes device-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -217,16 +233,16 @@ a:hover { color: var(--accent-primary-hover); }
 .bento-foot p { color: var(--text-secondary); font-size: 0.9375rem; }
 
 /* ---------- Ambient band: the city at dawn ---------- */
-.ambient { position: relative; overflow: hidden; border-top: 1px solid var(--border-hairline); background: #0B0D0C; color: #F2F4F3; min-height: clamp(15rem, 28vw, 21rem); display: grid; align-items: end; }
+.ambient { position: relative; overflow: hidden; border-top: 1px solid var(--border-hairline); background: #0A0A0C; color: #E9EBEF; min-height: clamp(15rem, 28vw, 21rem); display: grid; align-items: end; }
 .ambient-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.ambient::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(11 13 12 / 0.05) 30%, rgb(11 13 12 / 0.72)); pointer-events: none; }
+.ambient::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(10 10 12 / 0.05) 30%, rgb(10 10 12 / 0.72)); pointer-events: none; }
 .ambient-copy { position: relative; z-index: 1; padding-block: clamp(1.5rem, 3.5vw, 2.5rem); display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; }
-.ambient-copy p { font: 600 clamp(1.5rem, 3.2vw, 2.25rem)/1.15 var(--font-display); letter-spacing: -0.03em; max-width: 22ch; color: #F2F4F3; text-wrap: balance; }
+.ambient-copy p { font: 600 clamp(1.5rem, 3.2vw, 2.25rem)/1.15 var(--font-display); letter-spacing: -0.03em; max-width: 22ch; color: #E9EBEF; text-wrap: balance; }
 .ambient-tools { display: flex; align-items: center; gap: 0.75rem; }
 .ambient-note { font-size: 0.75rem; color: #C9CFCC; }
-.ambient-toggle { width: 40px; height: 40px; display: inline-grid; place-items: center; border-radius: var(--radius-sm); border: 1px solid rgb(242 244 243 / 0.4); background: rgb(11 13 12 / 0.4); color: #F2F4F3; cursor: pointer; }
-.ambient-toggle:hover { border-color: #F2F4F3; }
-.ambient-toggle:focus-visible { outline-color: #F2F4F3; }
+.ambient-toggle { width: 40px; height: 40px; display: inline-grid; place-items: center; border-radius: var(--radius-sm); border: 1px solid rgb(233 235 239 / 0.4); background: rgb(10 10 12 / 0.4); color: #E9EBEF; cursor: pointer; }
+.ambient-toggle:hover { border-color: #E9EBEF; }
+.ambient-toggle:focus-visible { outline-color: #E9EBEF; }
 .ambient-toggle .i-play { display: none; }
 .ambient-toggle[aria-pressed="false"] .i-play { display: block; }
 .ambient-toggle[aria-pressed="false"] .i-pause { display: none; }

@@ -31,13 +31,17 @@ const pairs = [
   ["text-primary", "accent-soft", 4.5, "attendance result"],
   ["accent-primary", "accent-soft", 3, "tick on the result"],
   ["highlight-text", "highlight-soft", 4.5, "status pill text"],
-  ["accent-highlight", "bg-surface", 3, "status dot and logo tittle"],
+  ["accent-highlight", "bg-surface", 3, "status dot"],
   ["error", "bg-surface", 4.5, "form errors"],
   ["text-primary", "error-soft", 4.5, "fallback text"],
   ["highlight-text", "bg-surface", 4.5, "counter warning"],
   ["border-control", "bg-canvas", 3, "input edges"],
   ["border-control", "bg-surface", 3, "input edges on cards"],
-  ["bg-canvas", "text-primary", 4.5, "logo j and skip link"],
+  ["bg-canvas", "text-primary", 4.5, "skip link"],
+  ["logo-word", "bg-canvas", 4.5, "JYKA in the wordmark"],
+  ["logo-labs", "bg-canvas", 4.5, "LABS in the wordmark"],
+  ["logo-arc-1", "bg-canvas", 3, "copper arc of the logo"],
+  ["logo-ring-1", "bg-canvas", 3, "silver ring of the logo (light theme; dark uses it at half strength as a track)"],
 ];
 
 let failed = 0, total = 0;
