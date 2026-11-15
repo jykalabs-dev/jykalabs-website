@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS with a little vanilla JavaScript, hosted on GitHub Pages from the public repo `jykalabs-dev/jykalabs-website`, served at the custom domain jykalabs.com. No build step. The contact form posts to Web3Forms (free tier), which emails each message to Jyka Labs; no address is shown on the site.
+Static HTML/CSS with a little vanilla JavaScript, hosted on GitHub Pages from the public repo `jykalabs-dev/jykalabs-website`, served at the custom domain jykalabs.com. No build step. The contact form posts to Web3Forms (free tier), which emails each message to support@jykalabs.com.
 
 ## Users
 
@@ -41,7 +41,7 @@ Assumption to confirm: the founder also wants companies that need software built
 
 ## Capabilities and Constraints
 
-- No personal contact details anywhere: no email address, phone number, people's names or street address. Contact only through the form.
+- Contact: the form, plus support@jykalabs.com shown beside it and in the footer (founder, 2026-11-15). No phone number, people's names or street address.
 - No legal name (LLP) or location shown for now (founder's decision).
 - Both products are unreleased: never describe them as available, never show made-up users, figures, logos, testimonials or screenshots of demo data.
 - The form collects name, email, optional organisation and a message: the page needs a short notice of how that is used (DPDP Act 2023).
@@ -52,7 +52,7 @@ Assumption to confirm: the founder also wants companies that need software built
 - Name: **Jyka Labs** (domain jykalabs.com). No existing logo, palette or typeface for the company; the products have their own brands, which this site doesn't reuse.
 - Voice (from the founder): minimalist, simple, eye-catching, very professional. Plain, specific English.
 - Visual standard (founder, 2026-11-11): a world-class, conventional software-company site at the craft level of Stripe, Linear and Vercel. The first, concept-led design (an inland letter card) was rejected as poor; do not use novelty concepts or metaphors as the page's structure.
-- Logo: lowercase "j" mark in a navy tile with a saffron dot (the j's tittle), beside the wordmark "Jyka Labs".
+- Logo: lowercase "j" mark in a violet tile with a cyan dot (the j's tittle), beside the wordmark "Jyka Labs" (recoloured 2026-11-15 with the light canvas, vivid accents redesign).
 
 ## Evidence on Hand
 
@@ -62,7 +62,7 @@ Assumption to confirm: the founder also wants companies that need software built
 ## Product Principles
 
 1. Say what is true and nothing more: unreleased products are "coming soon", no invented proof.
-2. One clear way to reach us: the form.
+2. One clear way to reach us: the form, with support@jykalabs.com as the fallback.
 3. Show the products through what they do, in plain words, not through hype.
 4. Credibility through craft: the site itself is evidence of the quality of work.
 

@@ -1,51 +1,46 @@
 # Design: jykalabs.com
 
-A product-company site at the craft level of Stripe, Linear and Vercel: white and cool-grey grounds, navy ink, one saffron accent. Tokens live in `docs/styles.css` `:root`; nothing below hard-codes a colour.
+Light canvas, vivid accents (founder's brief, 2026-11-15; replaces the navy and saffron look). Tokens live in `docs/styles.css` `:root`; components use only tokens. `node tools/check-contrast.mjs` re-checks every text/background pair (all at 4.5:1 or more; control edges 3:1).
 
 ## Logo
 
-A navy rounded tile (40 × 40, radius 10) with a white lowercase "j" stroke and a saffron dot as the j's tittle, beside the wordmark "Jyka Labs" in Geist Bold, tracking -0.03em. On navy, the tile inverts (white tile, navy j); the dot stays saffron. Source: `brand/logo-mark.svg` (also `docs/favicon.svg` and the `#logo-mark` symbol in `docs/index.html`).
+A violet rounded tile (40 × 40, radius 10) with a white lowercase "j" stroke and a cyan dot as the j's tittle, beside the wordmark "Jyka Labs" in Bricolage Grotesque Bold. Source: `brand/logo-mark.svg` (= `docs/favicon.svg`, and the `#logo-mark` symbol in `docs/index.html`).
 
 ## Colour
 
-| Token | Value | Use | Contrast on white |
-| --- | --- | --- | --- |
-| `--ink` | #0b1f3f | headings, primary buttons, logo tile | 16:1 |
-| `--text` | #1f2937 | body | 14:1 |
-| `--muted` | #4b5563 | secondary text | 7.5:1 |
-| `--blue` | #2346c8 | links, focus ring | 7.4:1 |
-| `--control` | #8a94a6 | input and secondary-button edges | 3.1:1 |
-| `--line` | #e3e6ec | hairlines, card edges | decorative |
-| `--canvas` | #f6f7f9 | tinted sections | |
-| `--navy-900` | #071630 | "How we work" and footer ground | |
-| `--on-dark` / `--on-dark-muted` | #e8edf6 / #a9b6cc | text on navy | 14:1 / 8.3:1 |
-| `--saffron` / `--saffron-soft` | #f2a516 / #fdf2dc | logo dot, "coming soon", current step, step numbers | never body text |
-| `ok`, `warn`, `alert` (+ `-soft`) | #146c43, #8a5300, #b42318 | status pills in illustrations, form errors | all ≥ 4.5:1 on their soft tint |
+| Token | Value | Use |
+| --- | --- | --- |
+| `--canvas` / `--surface` | #FBFAFF / #FFFFFF | page / cards and the How we work band |
+| `--ink` / `--ink-muted` | #15131A / #5A5866 | text / secondary text |
+| `--primary` / `--on-primary` | #5B2EE8 / #FFFFFF | primary buttons, links, focus ring |
+| `--hero-a` → `--hero-b` | #5B2EE8 → #9333EA | the hero panel only (white text, lede `--hero-muted` #F1EAFF) |
+| `--tile-violet/cyan/mint/pink` | #B79CFF, #5CE1E6, #9BF5B0, #FF9AD5 | service groups, icon tiles (ink text) |
+| `--glow-violet/cyan/mint/pink` | #E2D8FF, #CFF7F8, #D9FBE3, #FFE0F1 | soft radial glow behind the hero and contact only |
+| `--onemuster-a` → `-b` | #1D4A35 → #2E7D55 | OneMuster card and preview |
+| `--thandimandi-a` → `-b` | #0057FF → #0077D9 | ThandiMandi card and preview |
+| `--error`, `--ok` | #B42318, #146C43 | form errors, ticks |
 
-Light only; no dark mode.
+Gradients are written three times: a plain colour, `linear-gradient(135deg, A, B)`, then `linear-gradient(135deg in oklch, A, B)`. One hero gradient per screen height. Frosted cards (white 80% with a white edge and backdrop blur) only over the glow, solid under `prefers-reduced-transparency`. Light only.
 
 ## Type
 
-Geist (variable, self-hosted, OFL). Hero 2.5–4.5rem, 700, -0.04em, line-height 1.02. Section titles 1.75–2.75rem, 700, -0.035em. Card titles 1.25–1.5rem, 650. Body 1rem / 1.6; ledes 1.06–1.19rem in `--muted`. Numbers in illustrations are tabular.
+Bricolage Grotesque (variable, self-hosted, OFL) for headings: hero 2.6–5.25rem, 750, -0.04em, line-height 0.98; section titles 2–3.25rem, -0.035em. Geist (variable, self-hosted, OFL) for text: 1rem / 1.6, ledes 1.06–1.25rem in `--ink-muted`.
 
 ## Components
 
-- **Buttons:** pills, min height 48px (40px small). Primary navy; secondary white with a `--control` edge. Press scales to 0.97.
-- **Header:** sticky, translucent white with a hairline; nav hides under 1024px, "Contact us" stays.
-- **Capabilities:** a white hairline grid (4 / 2 / 1 columns), icon tile + title + one sentence; the last cell is a navy call to action.
-- **Product cards:** a navy art panel with a drawn mark (shield for OneMuster, snowflake for ThandiMandi), the name, a "Coming soon" badge and one line. No feature detail (founder's rule).
-- **Process:** four steps on navy with saffron numbers (the order is the point).
-- **Paths:** three bordered panels, each ending in an arrow link that preselects the form topic.
-- **Form:** white card, 48px fields, blue focus ring, inline errors in `--alert`, privacy note under a hairline.
-- **Illustrations:** drawn in HTML/CSS/SVG with skeleton bars instead of figures, so they show shapes, never invented numbers or customers. `docs/og-image.png` is rendered from `brand/og.html`.
+- **Header:** sticky canvas bar, hairline once scrolled; nav hides under 960px, "Talk to us" stays.
+- **Hero:** a rounded gradient panel. Left: headline, lede, "Talk to us" (white) and "See our products" (translucent). Right: two product previews drawn in HTML in each product's colours, using real product wording and no figures, labelled "Illustrations of products in development".
+- **Products:** one large gradient card per product with a "Coming soon" badge, one line, an outline mark (shield, snowflake); OneMuster links to onemuster.com.
+- **What we do:** the seven services in four coloured groups on a 7/5 · 5/7 grid.
+- **How we work:** four numbered steps on a white band (the order matters, so the numbers stay).
+- **Work with us:** three white cards; each "Talk to us" button preselects the form topic.
+- **Contact:** glow ground; email card and the form in frosted cards. Inline errors, "Sending…" state, email fallback with the message prefilled, success panel in place.
+- **Buttons:** pills, 48px (40px small), press scales to 0.97.
 
 ## Motion
 
-- Hero: window and phone rise in sequence, the chart line draws itself, the two status chips pop in; the phone and automation chip float gently and the saffron orbit turns slowly.
-- Scroll: sections and grid items fade up as they enter (700ms, ease-out, 70ms stagger within a group). The OneMuster check draws and the ThandiMandi snowflake turns into place when their cards appear.
-- Hover (fine pointers only): capability icons fill navy, cards lift 2–3px. Header gains a soft shadow once the page scrolls.
-- Content is visible without JavaScript; all movement is off under reduced motion.
+Only the hero previews rise in on load (900ms ease-out, 120ms apart); none under reduced motion. Hover changes colour or edge only.
 
 ## Layout
 
-Container 76rem, gutter 1–2.5rem fluid, section padding 4.5–8rem. Single column under 1024px; stacked pillars, paths and form fields under 768px.
+Container 74rem, gutter 1–2.5rem, section padding 4–7.5rem. Breakpoints 560 / 600 / 860 / 960 / 1024px; single column at phone width, checked at 360px.

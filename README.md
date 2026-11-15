@@ -3,21 +3,19 @@
 The Jyka Labs company website: one static page, served by GitHub Pages from the `docs/` folder of `main`, at the custom domain jykalabs.com.
 
 - `docs/index.html`, `docs/styles.css`, `docs/main.js`: the site. No build step, no dependencies.
-- `docs/fonts/`: Schibsted Grotesk (SIL Open Font License, `docs/fonts/OFL.txt`), self-hosted.
+- `docs/fonts/`: Bricolage Grotesque (headings) and Geist (text), self-hosted, both SIL Open Font License (`BRICOLAGE-OFL.txt`, `GEIST-OFL.txt`).
+- `docs/robots.txt`, `docs/sitemap.xml`: for search engines. `docs/og-image.png`: the share image, rendered from `brand/og.html`.
+- `tools/check-contrast.mjs`: re-checks every colour pair in `docs/styles.css` against WCAG AA (`node tools/check-contrast.mjs`).
 - `docs/CNAME`: the custom domain. `docs/.nojekyll`: serve files as they are.
 - `PRODUCT.md`, `.impeccable/`: design notes; not published (only `docs/` is served).
 
 ## Contact form
 
-The form posts to [Web3Forms](https://web3forms.com), which emails each message to the address the access key was created with. No address appears on the site.
+The form posts to [Web3Forms](https://web3forms.com), which emails each message to support@jykalabs.com (the inbox the access key was created with). The access key is set in one place, the hidden `access_key` field in `docs/index.html`; `main.js` reads it from there. It is public by design: it can only send to that inbox.
 
-To turn it on, create an access key at web3forms.com with the inbox that should receive messages, and paste it into `docs/index.html`:
-
-```html
-<input type="hidden" name="access_key" value="YOUR-ACCESS-KEY">
-```
-
-Until the key is set, the form shows "The form isn't available yet." The key is designed to be public; it can only send to the inbox it was created for.
+- With JavaScript, `main.js` checks the fields, sends the message as JSON and shows the result in place. If sending fails (offline, an error, a rate limit, or an empty key), it offers an email link to support@jykalabs.com with the topic and message already filled in, and keeps what was typed.
+- Without JavaScript, the browser posts the form and Web3Forms redirects to `https://jykalabs.com/thanks.html`. (This redirect must be a full address: Web3Forms performs it from its own server.)
+- Spam: Web3Forms' `botcheck` honeypot. No captcha, so the site still sets no cookies.
 
 ## Preview locally
 
@@ -27,7 +25,7 @@ python3 -m http.server 8080 -d docs
 
 ## Domain
 
-GitHub Pages settings: source `main` / `docs`, custom domain `jykalabs.com`, enforce HTTPS. At the domain registrar:
+GitHub Pages settings: source `main` / `docs`, custom domain `jykalabs.com`, Enforce HTTPS on (certificate for jykalabs.com and www, issued 15 Nov 2026, renewed by GitHub). At the domain registrar:
 
 | Type | Host | Value |
 | --- | --- | --- |

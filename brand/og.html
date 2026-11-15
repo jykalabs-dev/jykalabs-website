@@ -1,13 +1,19 @@
-<!doctype html><html><head><meta charset="utf-8"><style>
-@font-face{font-family:Geist;src:url(../docs/fonts/geist-latin-wght-normal.woff2) format("woff2");font-weight:100 900}
-html,body{margin:0;width:1200px;height:630px}
-body{font-family:Geist;background:#071630;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:72px 80px;box-sizing:border-box;position:relative;overflow:hidden}
-.ring{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.09)}
-.r1{width:900px;height:900px;right:-330px;top:-380px}.r2{width:560px;height:560px;right:-120px;top:-170px;border-color:rgba(242,165,22,.3)}
-.brand{display:flex;align-items:center;gap:20px;font-size:38px;font-weight:700;letter-spacing:-1px}
-h1{margin:0;font-size:88px;line-height:1;letter-spacing:-3.5px;font-weight:700;max-width:900px}
-h1 span{color:#8fb0ff}
-p{margin:0;font-size:30px;color:#a9b6cc}
-</style></head><body><div class="ring r1"></div><div class="ring r2"></div>
-<div class="brand"><svg width="64" height="64" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#fff"/><path d="M23 15.5v12.25a6.25 6.25 0 0 1-6.25 6.25H14" fill="none" stroke="#071630" stroke-width="4.25" stroke-linecap="round"/><circle cx="23" cy="9" r="2.9" fill="#f2a516"/></svg>Jyka Labs</div>
-<h1>We build and run <span>digital products.</span></h1><p>jykalabs.com</p></body></html>
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Source of docs/og-image.png (1200x630). Render with tools/render.mjs. -->
+<link rel="stylesheet" href="../docs/styles.css">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{background:var(--canvas);padding:40px;box-sizing:border-box}
+.panel{height:100%;border-radius:36px;background:linear-gradient(135deg in oklch,var(--hero-a),var(--hero-b));color:var(--on-primary);padding:64px 72px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.panel .brand{color:var(--on-primary);display:flex;align-items:center;gap:18px;font:700 40px/1 var(--font-display);letter-spacing:-1.2px}
+.brand img{width:60px;height:60px;border-radius:14px;box-shadow:0 0 0 3px var(--on-primary)}
+h1{margin:0;color:var(--on-primary);font:750 92px/0.96 var(--font-display);letter-spacing:-3.6px;max-width:760px}
+.row{display:flex;gap:14px}
+.chip{font:600 24px/1 var(--font-body);padding:14px 22px;border-radius:999px;color:var(--ink)}
+.c1{background:var(--tile-violet)}.c2{background:var(--tile-cyan)}.c3{background:var(--tile-mint)}.c4{background:var(--tile-pink)}
+.url{position:absolute;right:72px;top:72px;font:500 26px/1 var(--font-body);color:var(--hero-muted)}
+</style></head><body><div class="panel">
+<div class="brand"><img src="../docs/favicon.svg" alt="">Jyka Labs</div><span class="url">jykalabs.com</span>
+<h1>We build and run digital products.</h1>
+<div class="row"><span class="chip c1">Software and apps</span><span class="chip c2">Platforms</span><span class="chip c3">AI and data</span><span class="chip c4">Products</span></div>
+</div></body></html>

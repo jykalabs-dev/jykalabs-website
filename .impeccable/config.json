@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "docs/index.html"
+        ],
+        "createdAt": "2026-11-15T04:02:04.084Z",
+        "reason": "Claude, measured 2026-11-15: rendered text inset is 20-72px in every flagged container (hero-panel, product, group, form-card; band via the container gutter, 16px at 360px); detector can't resolve clamp() padding"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "docs/index.html"
+        ],
+        "createdAt": "2026-11-15T04:02:04.102Z",
+        "reason": "Claude, 2026-11-15: the nested boxes are the drawn app screens inside the OneMuster/ThandiMandi device frames in the hero illustration, an intentional mock, not layout cards"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-15T04:02:04.116Z",
+        "reason": "Founder's redesign brief 2026-11-15: 'Geist can stay for body text'; headings use Bricolage Grotesque"
+      }
+    ]
+  }
+}
