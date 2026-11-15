@@ -37,9 +37,9 @@ Plus Jakarta Sans 600/700 at -0.03em for headings (hero -0.035em). Inter 400/500
 
 Technology still lifes in the logo's palette (obsidian, silver, copper), generated with Higgsfield on 16 Nov 2026 to replace the earlier building and street photos, which didn't read as a tech company (founder). GPT Image 2.6 for stills, Kling 3.0 for the clip. No people, screens, text or brand-like products. No captions on the page (founder, 16 Nov 2026).
 
-- Hero: `circuit` (OneMuster tab), `cooling` (ThandiMandi tab), WebP at 800 and 1168 wide.
-- Product cards: `cables` (OneMuster), `rack` (ThandiMandi), WebP at 800 and 1344.
-- Ambient band: `grid-loop.mp4` (960×540, 5 s, silent) over the `grid` still, which is also the poster under reduced motion or data saver.
+- OneMuster: `onemuster-hero` (a gated housing community under a connected dome of light), `onemuster-card` (a guard's cap, keys and register turning into a connected shield). WebP at 800 and 1168/1344.
+- ThandiMandi: `thandimandi-hero` (farm, cold store, refrigerated truck and market linked by light), `thandimandi-card` (produce crates in a cold room traced as digital twins). WebP at 800 and 1168/1344.
+- Ambient band: `grid-loop.mp4` (960×540, 5 s, silent) over the `grid` still, which is also the poster under reduced motion or data saver. Kept at the founder's request.
 
 ## Components
 
